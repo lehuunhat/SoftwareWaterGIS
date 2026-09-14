@@ -1,5 +1,4 @@
-﻿
-html,
+﻿html,
 body,
 * {
     font-family: 'Nunito', sans-serif !important;
@@ -143,118 +142,104 @@ body,
     color: #dee2e6;
 }
 
-/*
-    Cam
-*/
-.cam-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    color: #8a93a3;
-    font-size: 13px;
-    z-index: 1;
+
+/* --- Cấu hình cơ bản cho Card khi Hover --- */
+.card-custom-hover {
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-    .cam-placeholder i {
-        font-size: 34px;
-        color: #5b6472;
-    }
+.card-custom-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12) !important;
+}
 
-    .cam-placeholder small {
-        font-size: 11px;
-        color: #6c7686;
-    }
+/* --- Từng loại bóng (Shadow) tương ứng với màu icon --- */
+.hover-primaryy { border-bottom: 4px solid #727cf5 !important; }
+.hover-primaryy:hover { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1), 0 14px 28px rgba(114, 124, 245, 0.4) !important; }
 
-.cam-player {
-    position: relative;
+.hover-success { border-bottom: 4px solid #0acf97 !important; }
+.hover-success:hover { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1), 0 14px 28px rgba(10, 207, 151, 0.4) !important; }
+
+.hover-info { border-bottom: 4px solid #39afd1 !important; }
+.hover-info:hover { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1), 0 14px 28px rgba(57, 175, 209, 0.4) !important; }
+
+.hover-warning { border-bottom: 4px solid #ffbc00 !important; }
+.hover-warning:hover { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1), 0 14px 28px rgba(255, 188, 0, 0.4) !important; }
+
+.hover-danger { border-bottom: 4px solid #fa5c7c !important; }
+.hover-danger:hover { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1), 0 14px 28px rgba(250, 92, 124, 0.4) !important; }
+
+.hover-secondary { border-bottom: 4px solid #6c757d !important; }
+.hover-secondary:hover { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1), 0 14px 28px rgba(108, 117, 125, 0.4) !important; }
+
+.hover-purple { border-bottom: 4px solid #8e44ad !important; }
+.hover-purple:hover { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1), 0 14px 28px rgba(142, 68, 173, 0.4) !important; }
+
+
+/* ============================================================
+   ANIMATION — Background panel (hiệu ứng nước trôi nhẹ)
+   ============================================================ */
+.page-bg-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #0d0f12;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    border: 1px solid #22262e;
+    height: 100%;
+    background: url('/assets/images/panel.webp') no-repeat center bottom;
+    background-size: cover;
+    opacity: 0.35;
+    z-index: 0;
+    pointer-events: none;
 }
 
-    .cam-player > * {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .cam-player video-stream,
-    .cam-player img {
-        object-fit: cover;
-        display: block;
-    }
-
-.cam-loading-text {
-    font-size: 13px;
-    color: #8a93a3;
+/* ============================================================
+   ANIMATION — Module cards: fade + rise lên khi tải trang
+   ============================================================ */
+.module-fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: module-fade-up-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.loading-dots::after {
-    content: '';
-    animation: loadingDots 1.5s infinite;
-}
-
-@keyframes loadingDots {
-    0% {
-        content: '';
-    }
-
-    25% {
-        content: '.';
-    }
-
-    50% {
-        content: '..';
-    }
-
-    75% {
-        content: '...';
-    }
-
-    100% {
-        content: '';
-    }
-}
-.tan-suat-item.active {
-    background-color: var(--bs-primary, #0d6efd);
-    color: #fff;
-    font-weight: 600;
-}
-#toastDieuKhien {
-    position: fixed !important;
-    top: 75px !important;
-    right: 50px !important;
-    left: auto !important;
-    bottom: auto !important;
-    width: 245px !important;
-    z-index: 9999999 !important;
-    padding: 12px 18px;
-    border-radius: 6px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    display: none;
-    font-weight: bold;
-    font-size: 14px;
-    text-align: left;
-}
-
-@keyframes icon-blink-alarm {
-    0%, 100% {
+@keyframes module-fade-up-in {
+    to {
         opacity: 1;
-    }
-
-    50% {
-        opacity: 0.1; /* Mờ đi để tạo cảm giác chớp tắt */
+        transform: translateY(0);
     }
 }
 
-.icon-warning-blink {
-    display: inline-block;
-    animation: icon-blink-alarm 0.6s infinite; /* Tốc độ chớp 0.6s */
-    margin-right: 4px;
+@media (prefers-reduced-motion: reduce) {
+    .module-fade-up {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ============================================================
+   FOOTER — đồng bộ màu với navbar (light/dark), gán bằng JS
+   ============================================================ */
+.footer-theme-synced {
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.footer-theme-synced .footer-links a {
+    color: inherit;
+    opacity: 0.85;
+    text-decoration: none;
+}
+
+    .footer-theme-synced .footer-links a:hover {
+        opacity: 1;
+        text-decoration: underline;
+    }
+
+/* ============================================================
+   LANGUAGE SWITCHER — đánh dấu ngôn ngữ đang chọn
+   ============================================================ */
+.language-option.active {
+    background-color: rgba(17, 106, 238, 0.08);
+    font-weight: 700;
 }

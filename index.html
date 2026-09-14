@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Horizontal Layout | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
+    <title>Software Water GIS - Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
-    <meta content="Coderthemes" name="author">
+    <meta content="DiaDu" name="author">
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
@@ -41,23 +41,15 @@
         <div class="navbar-custom">
             <div class="topbar container-fluid">
                 <div class="d-flex align-items-center gap-lg-2 gap-1">
-                    <a href="index.html" class="logo logo-light">
-                        <span class="logo-lg">
-                            <img src="assets/images/logo.png" alt="logo">
-                        </span>
-                        <span class="logo-sm">
-                            <img src="assets/images/logo-sm.png" alt="small logo">
-                        </span>
+                    <a class="logo-lg">
+                        <img src="assets/images/logo.webp" alt="logo">
                     </a>
-                    <a href="index.html" class="logo logo-dark">
-                        <span class="logo-lg">
-                            <img src="assets/images/logo-dark.png" alt="dark logo">
-                        </span>
-                        <span class="logo-sm">
-                            <img src="assets/images/logo-dark-sm.png" alt="small logo">
-                        </span>
-                    </a>
-                    <ul class="list-unstyled d-none d-lg-flex mb-0 ms-2 gap-3 align-items-center font-15" id="mainMenu">
+                    <span class="d-lg-flex flex-column gap-1 d-none text-primary">
+                        <h5 class="text-center text-uppercase">
+                            Software Water GIS
+                        </h5>
+                    </span>
+                    <!-- <ul class="list-unstyled d-none d-lg-flex mb-0 ms-2 gap-3 align-items-center font-15" id="mainMenu">
 
                         <li>
                             <a href="index.html"
@@ -72,292 +64,41 @@
                             </a>
                         </li>
 
-                    </ul>
-                    <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Mở menu"
+                    </ul> -->
+                    <!-- <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Mở menu"
                         aria-controls="mobileSidePanel" aria-expanded="false">
                         <i class="mdi mdi-menu"></i>
-                    </button>
+                    </button> -->
                 </div>
 
                 <ul class="topbar-menu d-flex align-items-center gap-3">
                     <li class="dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
                             aria-haspopup="false" aria-expanded="false">
-                            <img src="assets/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" height="12">
-                            <span class="align-middle d-none d-lg-inline-block">English</span> <i
-                                class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
+                            <img id="langToggleFlag" src="assets/images/flags/vietnam.jpg" alt="user-image"
+                                class="me-0 me-sm-1" height="12">
+                            <span id="langToggleLabel" class="align-middle d-none d-lg-inline-block">Tiếng Việt</span>
+                            <i class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated">
 
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12">
-                                <span class="align-middle">German</span>
+                            <a href="javascript:void(0);" class="dropdown-item language-option" data-lang="vi"
+                                data-flag="assets/images/flags/vietnam.jpg" data-label="Tiếng Việt">
+                                <img src="assets/images/flags/vietnam.jpg" alt="Vietnamese" class="me-1" height="12">
+                                <span>Tiếng Việt</span>
                             </a>
 
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12">
-                                <span class="align-middle">Italian</span>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12">
-                                <span class="align-middle">Spanish</span>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12">
-                                <span class="align-middle">Russian</span>
+                            <a href="javascript:void(0);" class="dropdown-item language-option" data-lang="en"
+                                data-flag="assets/images/flags/us.jpg" data-label="English">
+                                <img src="assets/images/flags/us.jpg" alt="English" class="me-1" height="12">
+                                <span>English</span>
                             </a>
 
                         </div>
                     </li>
 
-                    <li class="dropdown notification-list">
-                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
-                            aria-haspopup="false" aria-expanded="false">
-                            <i class="ri-notification-3-line font-22"></i>
-                            <span class="noti-icon-badge"></span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg py-0">
-                            <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
-                                <div class="row align-items-center">
-                                    <div class="col">
-                                        <h6 class="m-0 font-16 fw-semibold"> Notification</h6>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a href="javascript: void(0);" class="text-dark text-decoration-underline">
-                                            <small>Clear All</small>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="px-2" style="max-height: 300px;" data-simplebar="init">
-                                <div class="simplebar-wrapper" style="margin: 0px -12px;">
-                                    <div class="simplebar-height-auto-observer-wrapper">
-                                        <div class="simplebar-height-auto-observer"></div>
-                                    </div>
-                                    <div class="simplebar-mask">
-                                        <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
-                                            <div class="simplebar-content-wrapper" tabindex="0" role="region"
-                                                aria-label="scrollable content" style="height: auto; overflow: hidden;">
-                                                <div class="simplebar-content" style="padding: 0px 12px;">
-
-                                                    <h5 class="text-muted font-12 text-uppercase mt-2">Today</h5>
-                                                    <!-- item-->
-
-                                                    <a href="javascript:void(0);"
-                                                        class="dropdown-item p-0 notify-item card unread-noti shadow-none mb-1">
-                                                        <div class="card-body">
-                                                            <span class="float-end noti-close-btn text-muted"><i
-                                                                    class="mdi mdi-close"></i></span>
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="notify-icon bg-primary">
-                                                                        <i class="ri-chat-quote-line font-18"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="flex-grow-1 text-truncate ms-2">
-                                                                    <h5 class="noti-item-title fw-semibold font-14">
-                                                                        Datacorp <small
-                                                                            class="fw-normal text-muted ms-1">1 min
-                                                                            ago</small></h5>
-                                                                    <small class="noti-item-subtitle text-muted">Caleb
-                                                                        Flakelar commented on Admin</small>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-
-                                                    <!-- item-->
-                                                    <a href="javascript:void(0);"
-                                                        class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
-                                                        <div class="card-body">
-                                                            <span class="float-end noti-close-btn text-muted"><i
-                                                                    class="mdi mdi-close"></i></span>
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="notify-icon bg-info">
-                                                                        <i class="ri-user-add-line font-18"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="flex-grow-1 text-truncate ms-2">
-                                                                    <h5 class="noti-item-title fw-semibold font-14">
-                                                                        Admin <small class="fw-normal text-muted ms-1">1
-                                                                            hours ago</small></h5>
-                                                                    <small class="noti-item-subtitle text-muted">New
-                                                                        user registered</small>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-
-                                                    <h5 class="text-muted font-12 text-uppercase mt-0">Yesterday</h5>
-
-                                                    <!-- item-->
-                                                    <a href="javascript:void(0);"
-                                                        class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
-                                                        <div class="card-body">
-                                                            <span class="float-end noti-close-btn text-muted"><i
-                                                                    class="mdi mdi-close"></i></span>
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="notify-icon">
-                                                                        <img src="assets/images/users/avatar-2.jpg"
-                                                                            class="img-fluid rounded-circle" alt="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="flex-grow-1 text-truncate ms-2">
-                                                                    <h5 class="noti-item-title fw-semibold font-14">
-                                                                        Cristina Pride <small
-                                                                            class="fw-normal text-muted ms-1">1 day
-                                                                            ago</small></h5>
-                                                                    <small class="noti-item-subtitle text-muted">Hi, How
-                                                                        are you? What about our next meeting</small>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-
-                                                    <h5 class="text-muted font-12 text-uppercase mt-0">02 Jun 2025</h5>
-
-                                                    <!-- item-->
-                                                    <a href="javascript:void(0);"
-                                                        class="dropdown-item p-0 notify-item card read-noti shadow-none mb-1">
-                                                        <div class="card-body">
-                                                            <span class="float-end noti-close-btn text-muted"><i
-                                                                    class="mdi mdi-close"></i></span>
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="notify-icon bg-primary">
-                                                                        <i class="ri-chat-voice-line font-18"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="flex-grow-1 text-truncate ms-2">
-                                                                    <h5 class="noti-item-title fw-semibold font-14">
-                                                                        Datacorp</h5>
-                                                                    <small class="noti-item-subtitle text-muted">Caleb
-                                                                        Flakelar commented on Admin</small>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-
-                                                    <!-- item-->
-                                                    <a href="javascript:void(0);"
-                                                        class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
-                                                        <div class="card-body">
-                                                            <span class="float-end noti-close-btn text-muted"><i
-                                                                    class="mdi mdi-close"></i></span>
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="flex-shrink-0">
-                                                                    <div class="notify-icon">
-                                                                        <img src="assets/images/users/avatar-4.jpg"
-                                                                            class="img-fluid rounded-circle" alt="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="flex-grow-1 text-truncate ms-2">
-                                                                    <h5 class="noti-item-title fw-semibold font-14">
-                                                                        Karen Robinson</h5>
-                                                                    <small class="noti-item-subtitle text-muted">Wow !
-                                                                        this admin looks good and awesome design</small>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-
-                                                    <div class="text-center">
-                                                        <i class="mdi mdi-dots-circle mdi-spin text-muted h3 mt-0"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div>
-                                </div>
-                                <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
-                                    <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
-                                </div>
-                                <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
-                                    <div class="simplebar-scrollbar" style="height: 0px; display: none;"></div>
-                                </div>
-                            </div>
-
-                            <!-- All-->
-                            <a href="javascript:void(0);"
-                                class="dropdown-item text-center text-primary notify-item border-top py-2">
-                                View All
-                            </a>
-
-                        </div>
-                    </li>
-
-                    <li class="dropdown d-none d-sm-inline-block">
-                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"
-                            aria-haspopup="false" aria-expanded="false">
-                            <i class="ri-apps-2-line font-22"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg p-0">
-
-                            <div class="p-2">
-                                <div class="row g-0">
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/slack.png" alt="slack">
-                                            <span>Slack</span>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/github.png" alt="Github">
-                                            <span>GitHub</span>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/dribbble.png" alt="dribbble">
-                                            <span>Dribbble</span>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="row g-0">
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
-                                            <span>Bitbucket</span>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/dropbox.png" alt="dropbox">
-                                            <span>Dropbox</span>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/g-suite.png" alt="G Suite">
-                                            <span>G Suite</span>
-                                        </a>
-                                    </div>
-                                </div> <!-- end row-->
-                            </div>
-
-                        </div>
-                    </li>
-
-                    <li class="d-none d-sm-inline-block">
-                        <a class="nav-link" data-bs-toggle="offcanvas" href="#theme-settings-offcanvas">
-                            <i class="ri-settings-3-line font-22"></i>
-                        </a>
-                    </li>
-
-                    <li class="d-none d-sm-inline-block">
-                        <div class="nav-link" id="light-dark-mode">
+                    <li class=" d-sm-inline-block">
+                        <div class="nav-link" id="light-dark-mode" title="Chuyển đổi chế độ sáng/tối">
                             <i class="ri-moon-line font-22"></i>
                         </div>
                     </li>
@@ -369,69 +110,27 @@
                         </a>
                     </li>
 
-                    <li class="dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false">
-                            <span class="account-user-avatar">
-                                <img src="assets/images/users/avatar-1.jpg" alt="user-image" width="32"
-                                    class="rounded-circle">
-                            </span>
-                            <span class="d-lg-flex flex-column gap-1 d-none">
-                                <h5 class="my-0">Dominic Keller</h5>
-                                <h6 class="my-0 fw-normal">Founder</h6>
+                    <li class="d-flex align-items-center">
+                        <a href="login.html" class="btn btn-light d-flex align-items-center gap-1 text-body">
+                            <i class="mdi mdi-login-variant font-18"></i>
+                            <span class="d-none d-md-inline" data-vi="Đăng nhập" data-en="Sign in">
+                                Đăng nhập
                             </span>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
-                            <!-- item-->
-                            <div class=" dropdown-header noti-title">
-                                <h6 class="text-overflow m-0">Welcome !</h6>
-                            </div>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <i class="ri-user-smile-line font-16 me-1"></i>
-                                <span>My Account</span>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <i class="ri-user-settings-line font-16 me-1"></i>
-                                <span>Settings</span>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <i class="ri-lifebuoy-line font-16 me-1"></i>
-                                <span>Support</span>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <i class="ri-lock-line font-16 me-1"></i>
-                                <span>Lock Screen</span>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item">
-                                <i class="ri-login-circle-line font-16 me-1"></i>
-                                <span>Logout</span>
-                            </a>
-                        </div>
                     </li>
                 </ul>
             </div>
         </div>
         <!-- ========== Topbar End ========== -->
 
-        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+        <!-- <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div> -->
 
-        <aside class="mobile-side-panel" id="mobileSidePanel" aria-hidden="true">
+        <!-- <aside class="mobile-side-panel" id="mobileSidePanel" aria-hidden="true">
             <div class="mobile-side-panel-header">
-                <img src="assets/images/logo-dark-sm.png" alt="logo">
+                <img src="assets/images/logo.webp" alt="logo">
                 <span class="d-lg-flex flex-column">
                     <h6 class="my-0 text-center text-uppercase fw-normal" style="font-size: 10px;line-height: 2">
-                        SoftwareWaterGIS</h6>
-                    <!-- <h5 class="my-0 text-center text-uppercase" style="font-size: 10px;">SoftwareWaterGIS</h5> -->
+                        Software Water GIS</h6>
                 </span>
                 <button type="button" class="mobile-side-panel-close" id="mobileMenuClose" aria-label="Đóng menu">
                     <i class="mdi mdi-close"></i>
@@ -453,37 +152,209 @@
                 </li>
             </ul>
 
-        </aside>
+        </aside> -->
 
         <div class="content-page">
             <div class="content">
-
+                <div class="page-bg-panel"></div>
                 <!-- Start Content-->
-                <div class="container-fluid">
+                <div class="container-fluid" style="position: relative; z-index: 1;">
 
-                    <!-- start page title -->
-                    <div class="row">
-                        <div class="col-12">
+                    <!-- Bọc toàn bộ nội dung vào một khối flex để căn giữa theo chiều dọc -->
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-9">
+                            <!-- start page title -->
+                            <div class="row justify-content-center mb-2">
+                                <div class="col-12 text-center">
+                                    <h3 class="page-title text-uppercase fw-bold text-primary"
+                                        style="font-size: 26px; letter-spacing: 1px;" data-vi="Hệ thống GIS ngành nước"
+                                        data-en="Water Sector GIS System">
+                                        Hệ thống GIS ngành nước
+                                    </h3>
+                                    <p class="text-dark fw-semibold font-16"
+                                        data-vi="Vui lòng chọn một phân hệ chức năng bên dưới"
+                                        data-en="Please select a functional module below">Vui lòng chọn một phân
+                                        hệ
+                                        chức năng bên dưới</p>
+                                </div>
+                            </div>
+                            <!-- end page title -->
+                            <div class="row justify-content-center mb-1">
+                                <div class="col-xl-4 col-lg-5 col-md-6">
+                                    <a href="#" class="text-body text-decoration-none d-block h-100">
+                                        <div class="card tilebox-one shadow border-0 card-custom-hover hover-primaryy text-center module-fade-up"
+                                            style="animation-delay: 0.00s;">
+                                            <div
+                                                class="card-body d-flex flex-column justify-content-center align-items-center">
+                                                <div
+                                                    class="avatar-lg bg-primary-lighten rounded-circle d-flex align-items-center justify-content-centershadow-sm">
+                                                </div>
+                                                <h4 class="my-2 fw-bold text-dark" data-vi="Quản lý Hệ thống"
+                                                    data-en="System Management">Quản lý Hệ thống</h4>
+                                                <p class="mb-0 text-muted font-14"
+                                                    data-vi="Quản trị người dùng, phân quyền & cấu hình"
+                                                    data-en="User administration, roles & configuration">Quản trị người
+                                                    dùng, phân quyền &amp; cấu hình</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Thêm justify-content-center để căn giữa các thẻ, giúp hàng dưới cùng (3 thẻ) được cân đối -->
+                            <div class="row justify-content-center">
+                                <!-- Module 2 -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 mb-1">
+                                    <a href="#" class="text-body text-decoration-none d-block h-100">
+                                        <div class="card tilebox-one shadow border-0 card-custom-hover hover-success text-center module-fade-up"
+                                            style="animation-delay: 0.08s;">
+                                            <div
+                                                class="card-body d-flex flex-column justify-content-center align-items-center">
+                                                <div class="avatar-lg rounded-circle d-flex align-items-center justify-content-centershadow-sm"
+                                                    style="background-color: rgba(10, 207, 151, 0.15);">
+                                                </div>
+                                                <h4 class="my-2 fw-bold text-dark"
+                                                    data-vi="Quản lý thông tin dữ liệu & tài sản"
+                                                    data-en="Data & asset management">Quản lý thông tin dữ liệu & tài
+                                                    sản</h4>
+                                                <p class="mb-0 text-muted font-14"
+                                                    data-vi="Hồ sơ mạng lưới, danh mục thiết bị"
+                                                    data-en="Network records, equipment catalog">Hồ sơ mạng lưới, danh
+                                                    mục thiết bị</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Module 3 -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 mb-1">
+                                    <a href="#" class="text-body text-decoration-none d-block h-100">
+                                        <div class="card tilebox-one shadow border-0 card-custom-hover hover-info text-center module-fade-up"
+                                            style="animation-delay: 0.16s;">
+                                            <div
+                                                class="card-body d-flex flex-column justify-content-center align-items-center">
+                                                <div class="avatar-lg rounded-circle d-flex align-items-center justify-content-centershadow-sm"
+                                                    style="background-color: rgba(57, 175, 209, 0.15);">
+                                                </div>
+                                                <h4 class="my-2 fw-bold text-dark" data-vi="Quản lý mạng lưới"
+                                                    data-en="Network Management">Quản lý mạng lưới</h4>
+                                                <p class="mb-0 text-muted font-14"
+                                                    data-vi="Bản đồ không gian & công cụ WebGIS"
+                                                    data-en="Spatial maps & WebGIS tools">Bản đồ không gian &amp; công
+                                                    cụ WebGIS</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Module 4 -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 mb-1">
+                                    <a href="#" class="text-body text-decoration-none d-block h-100">
+                                        <div class="card tilebox-one shadow border-0 card-custom-hover hover-warning text-center module-fade-up"
+                                            style="animation-delay: 0.24s;">
+                                            <div
+                                                class="card-body d-flex flex-column justify-content-center align-items-center">
+                                                <div class="avatar-lg rounded-circle d-flex align-items-center justify-content-centershadow-sm"
+                                                    style="background-color: rgba(255, 188, 0, 0.15);">
+                                                </div>
+                                                <h4 class="my-2 fw-bold text-dark" data-vi="EPANET" data-en="EPANET">
+                                                    EPANET</h4>
+                                                <p class="mb-0 text-muted font-14"
+                                                    data-vi="Mô phỏng & phân tích thủy lực mạng lưới"
+                                                    data-en="Network hydraulic simulation & analysis">Mô phỏng &amp;
+                                                    phân tích thủy lực mạng lưới</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- ================= HÀNG 3: 3 CHỨC NĂNG ================= -->
+                            <div class="row justify-content-center">
+                                <!-- Module 5 -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 mb-1">
+                                    <a href="#" class="text-body text-decoration-none d-block h-100">
+                                        <div class="card tilebox-one shadow border-0 card-custom-hover hover-danger text-center module-fade-up"
+                                            style="animation-delay: 0.32s;">
+                                            <div
+                                                class="card-body d-flex flex-column justify-content-center align-items-center">
+                                                <div class="avatar-lg rounded-circle d-flex align-items-center justify-content-centershadow-sm"
+                                                    style="background-color: rgba(250, 92, 124, 0.15);">
+                                                </div>
+                                                <h4 class="my-2 fw-bold text-dark" data-vi="Khách hàng"
+                                                    data-en="Customers">Khách hàng</h4>
+                                                <p class="mb-0 text-muted font-14"
+                                                    data-vi="Quản lý điểm tiêu thụ, đồng hồ nước"
+                                                    data-en="Manage consumption points & water meters">Quản lý điểm tiêu
+                                                    thụ, đồng hồ nước</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Module 6 -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 mb-1">
+                                    <a href="#" class="text-body text-decoration-none d-block h-100">
+                                        <div class="card tilebox-one shadow border-0 card-custom-hover hover-secondary text-center module-fade-up"
+                                            style="animation-delay: 0.40s;">
+                                            <div
+                                                class="card-body d-flex flex-column justify-content-center align-items-center">
+                                                <div class="avatar-lg rounded-circle d-flex align-items-center justify-content-centershadow-sm"
+                                                    style="background-color: rgba(108, 117, 125, 0.15);">
+                                                </div>
+                                                <h4 class="my-2 fw-bold text-dark" data-vi="SCADA/IoT"
+                                                    data-en="SCADA/IoT">SCADA/IoT</h4>
+                                                <p class="mb-0 text-muted font-14"
+                                                    data-vi="Giám sát áp lực, lưu lượng thời gian thực"
+                                                    data-en="Real-time pressure & flow monitoring">Giám sát áp lực, lưu
+                                                    lượng thời gian thực</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Module 7 -->
+                                <div class="col-xl-4 col-lg-4 col-md-6 mb-1">
+                                    <a href="#" class="text-body text-decoration-none d-block h-100">
+                                        <div class="card tilebox-one shadow border-0 card-custom-hover hover-purple text-center module-fade-up"
+                                            style="animation-delay: 0.48s;">
+                                            <div
+                                                class="card-body d-flex flex-column justify-content-center align-items-center">
+                                                <div class="avatar-lg rounded-circle d-flex align-items-center justify-content-centershadow-sm"
+                                                    style="background-color: rgba(142, 68, 173, 0.15);">
+                                                </div>
+                                                <h4 class="my-2 fw-bold text-dark" data-vi="Thất Thoát + Công việc"
+                                                    data-en="NRW & Work Orders">Thất Thoát + Công việc</h4>
+                                                <p class="mb-0 text-muted font-14"
+                                                    data-vi="Tính toán NRW & bảo trì sửa chữa"
+                                                    data-en="NRW calculation & maintenance">Tính toán NRW &amp; bảo trì
+                                                    sửa chữa</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div> <!-- end row -->
                         </div>
-                    </div>
-                    <!-- end page title -->
+
+
+                    </div> <!-- end flex container -->
 
                 </div> <!-- container -->
 
             </div> <!-- content -->
 
             <!-- Footer Start -->
-            <footer class="footer">
-                <div class="container-fluid">
+            <footer class="footer footer-theme-synced">
+                <div class="container-fluid" style="position: relative; z-index: 2;">
                     <div class="row">
-                        <div class="col-md-6">
-                            <script>document.write(new Date().getFullYear())</script>2026 © Hyper - Coderthemes.com
+                        <div class="col-md-6" data-vi="Phát triển bởi: DIADU Co., Ltd"
+                            data-en="Developed by: DIADU Co., Ltd">
+                            Phát triển bởi: DIADU Co., Ltd
                         </div>
                         <div class="col-md-6">
                             <div class="text-md-end footer-links d-none d-md-block">
-                                <a href="javascript: void(0);">About</a>
-                                <a href="javascript: void(0);">Support</a>
-                                <a href="javascript: void(0);">Contact Us</a>
+                                <a href="javascript: void(0);" data-vi="Giới thiệu" data-en="About">Giới thiệu</a>
+                                <a href="javascript: void(0);" data-vi="Hỗ trợ" data-en="Support">Hỗ trợ</a>
+                                <a href="javascript: void(0);" data-vi="Liên hệ" data-en="Contact">Liên hệ</a>
                             </div>
                         </div>
                     </div>
@@ -1463,10 +1334,6 @@
     <script src="assets/vendor/jsvectormap/world.js"></script>
     <!-- Dashboard App js -->
 
-
-
-
-
     <div class="daterangepicker ltr single opensright">
         <div class="ranges"></div>
         <div class="drp-calendar left single" style="display: block;">
@@ -1549,6 +1416,80 @@
                     link.classList.remove("fw-semibold");
                     link.classList.add("fw-bold");
                 }
+            });
+
+            // ==========================================
+            // 3. CHUYỂN ĐỔI NGÔN NGỮ (TIẾNG VIỆT / ENGLISH)
+            // ==========================================
+            const LANG_STORAGE_KEY = 'site-lang';
+            const langToggleFlag = document.getElementById('langToggleFlag');
+            const langToggleLabel = document.getElementById('langToggleLabel');
+            const langOptions = document.querySelectorAll('.language-option');
+            const translatable = document.querySelectorAll('[data-vi][data-en]');
+
+            function applyLanguage(lang) {
+                document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'vi');
+
+                translatable.forEach(el => {
+                    const text = el.getAttribute(lang === 'en' ? 'data-en' : 'data-vi');
+                    if (text !== null) {
+                        el.textContent = text;
+                    }
+                });
+
+                const activeOption = document.querySelector(`.language-option[data-lang="${lang}"]`);
+                if (activeOption && langToggleFlag && langToggleLabel) {
+                    langToggleFlag.setAttribute('src', activeOption.getAttribute('data-flag'));
+                    langToggleLabel.textContent = activeOption.getAttribute('data-label');
+                }
+
+                langOptions.forEach(opt => {
+                    opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+                });
+            }
+
+            function setLanguage(lang) {
+                localStorage.setItem(LANG_STORAGE_KEY, lang);
+                applyLanguage(lang);
+            }
+
+            langOptions.forEach(opt => {
+                opt.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    setLanguage(this.getAttribute('data-lang'));
+                });
+            });
+
+            const savedLang = localStorage.getItem(LANG_STORAGE_KEY) || 'vi';
+            applyLanguage(savedLang);
+
+            // ==========================================
+            // 4. ĐỒNG BỘ MÀU FOOTER THEO NAVBAR (SÁNG/TỐI)
+            // ==========================================
+            const navbarEl = document.querySelector('.navbar-custom');
+            const footerEl = document.querySelector('.footer-theme-synced');
+
+            function syncFooterTheme() {
+                if (!navbarEl || !footerEl) return;
+                const navStyle = window.getComputedStyle(navbarEl);
+                footerEl.style.backgroundColor = navStyle.backgroundColor;
+                footerEl.style.color = navStyle.color;
+                footerEl.style.borderTop = '1px solid ' + (navStyle.borderBottomColor || navStyle.color);
+            }
+
+            syncFooterTheme();
+
+            const themeToggleBtn = document.getElementById('light-dark-mode');
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', function () {
+                    setTimeout(syncFooterTheme, 0);
+                });
+            }
+
+            const themeObserver = new MutationObserver(syncFooterTheme);
+            themeObserver.observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ['data-bs-theme']
             });
 
         });
