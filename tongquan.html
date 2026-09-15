@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HydraCore — Nền tảng mô phỏng thủy lực mạng cấp nước</title>
+    <title>Software Water GIS — Nền tảng mô phỏng thủy lực mạng cấp nước</title>
+    <link rel="shortcut icon" href="assets/images/logo.ico">
     <!-- Google Fonts: Đã đồng bộ về duy nhất IBM Plex Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -252,6 +253,10 @@
             inset: 0;
             background: radial-gradient(500px 260px at 50% 0%, rgba(8, 145, 168, 0.28), transparent 65%);
         }
+
+        .logo-lg img {
+            height: 35px;
+        }
     </style>
 </head>
 
@@ -259,15 +264,13 @@
     <!-- NAVBAR -->
     <header class="nav fixed-top w-100" id="siteNav">
         <div class="container d-flex align-items-center justify-content-between">
-            <a href="#top" class="navbar-brand d-flex align-items-center gap-2 fs-5 text-dark text-decoration-none">
-                <svg class="mark" viewBox="0 0 32 32" fill="none" width="30" height="30">
-                    <circle cx="16" cy="16" r="15" stroke="#0891A8" stroke-width="2" />
-                    <path d="M9 18c1.5-6 4-9 7-9s5.5 3 7 9" stroke="#0B1F3A" stroke-width="2" stroke-linecap="round" />
-                    <circle cx="9" cy="18" r="2" fill="#FF6B4A" />
-                    <circle cx="23" cy="18" r="2" fill="#0891A8" />
-                </svg>
-                HydraCore
+            <a href="#top" class="navbar-brand d-flex align-items-center gap-2 text-dark text-decoration-none">
+                <span class="logo-lg">
+                    <img src="assets/images/logo.webp" alt="logo">
+                </span>
+                Software Water GIS
             </a>
+
             <nav class="d-none d-md-flex gap-4">
                 <a href="#features" class="text-decoration-none text-secondary fw-medium">Tính năng</a>
                 <a href="#workflow" class="text-decoration-none text-secondary fw-medium">Quy trình</a>
@@ -277,6 +280,7 @@
                     lưới</a>
                 <a href="#pricing" class="text-decoration-none text-secondary fw-medium">Bảng giá</a>
             </nav>
+
             <div class="d-flex align-items-center gap-2">
                 <a href="#" class="btn btn-outline-secondary border-1 d-none d-lg-block">Đăng nhập</a>
                 <a href="#pricing" class="btn btn-dark text-white">Dùng thử miễn phí</a>
@@ -292,7 +296,8 @@
                         <div class="eyebrow">Nền tảng SaaS mô phỏng thủy lực</div>
                         <h1 class="hero-title display-4 fw-bold mb-4">Mô phỏng mạng cấp nước với <br /><em>độ chính xác
                                 từng điểm nút</em></h1>
-                        <p class="lead text-secondary mb-4">HydraCore kết hợp lõi tính toán EPANET với bản đồ Leaflet
+                        <p class="lead text-secondary mb-4">Software Water GIS kết hợp lõi tính toán EPANET với bản đồ
+                            Leaflet
                             tương tác, giúp kỹ sư cấp nước nhập shapefile, chạy mô phỏng áp lực — lưu lượng — chất lượng
                             nước và ra quyết định vận hành chỉ trong vài phút.</p>
                         <div class="d-flex flex-wrap gap-3 mb-4">
@@ -417,7 +422,8 @@
                     <div class="col-lg-8">
                         <div class="eyebrow">Tính năng cốt lõi</div>
                         <h2 class="display-6 fw-bold mb-3">Mọi công cụ kỹ sư cấp nước cần, trong một nền tảng</h2>
-                        <p class="lead text-secondary">Từ lõi giải thủy lực đến trực quan hoá bản đồ — HydraCore được
+                        <p class="lead text-secondary">Từ lõi giải thủy lực đến trực quan hoá bản đồ — Software Water
+                            GIS được
                             xây dựng riêng cho bài toán mạng lưới cấp nước đô thị.</p>
                     </div>
                 </div>
@@ -709,7 +715,8 @@
                     <div class="col-lg-6 reveal pe-lg-5">
                         <div class="eyebrow">Tích hợp bản đồ GIS</div>
                         <h2 class="display-6 fw-bold mb-4">Shapefile của bạn, hiển thị sống động trên Leaflet</h2>
-                        <p class="lead text-secondary mb-4 fs-6">Không cần chuyển đổi định dạng thủ công. HydraCore đọc
+                        <p class="lead text-secondary mb-4 fs-6">Không cần chuyển đổi định dạng thủ công. Software Water
+                            GIS đọc
                             trực tiếp shapefile mạng lưới cấp nước và dựng bản đồ tương tác chỉ trong vài giây.</p>
                         <ul class="list-unstyled mb-4">
                             <li class="d-flex align-items-start gap-3 mb-3">
@@ -817,16 +824,11 @@
         <div class="container">
             <div class="row mb-5 gy-4">
                 <div class="col-lg-4 pe-lg-5">
-                    <a href="#top"
-                        class="navbar-brand d-flex align-items-center gap-2 fs-5 text-dark text-decoration-none mb-3">
-                        <svg class="mark" viewBox="0 0 32 32" fill="none" width="30" height="30">
-                            <circle cx="16" cy="16" r="15" stroke="#0891A8" stroke-width="2" />
-                            <path d="M9 18c1.5-6 4-9 7-9s5.5 3 7 9" stroke="#0B1F3A" stroke-width="2"
-                                stroke-linecap="round" />
-                            <circle cx="9" cy="18" r="2" fill="#FF6B4A" />
-                            <circle cx="23" cy="18" r="2" fill="#0891A8" />
-                        </svg>
-                        HydraCore
+                    <a href="#top" class="navbar-brand d-flex align-items-center gap-2 text-dark text-decoration-none">
+                        <span class="logo-lg">
+                            <img src="assets/images/logo.webp" alt="logo">
+                        </span>
+                        Software Water GIS
                     </a>
                     <p class="text-secondary small">Nền tảng SaaS mô phỏng thủy lực mạng cấp nước, tích hợp lõi EPANET
                         và bản đồ Leaflet cho kỹ sư cấp nước.</p>
@@ -855,14 +857,14 @@
                     <h4 class="font-mono text-uppercase text-secondary mb-3"
                         style="font-size: 0.85rem; letter-spacing: 1px;">Công ty</h4>
                     <ul class="list-unstyled d-flex flex-column gap-2">
-                        <li><a href="#" class="text-decoration-none text-secondary small">Về HydraCore</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary small">Về Software Water GIS</a></li>
                         <li><a href="#" class="text-decoration-none text-secondary small">Tuyển dụng</a></li>
                         <li><a href="#" class="text-decoration-none text-secondary small">Liên hệ</a></li>
                     </ul>
                 </div>
             </div>
             <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 pt-4 border-top">
-                <p class="mb-0 text-secondary small">© 2026 HydraCore. Đã đăng ký bản quyền.</p>
+                <p class="mb-0 text-secondary small">© 2026 Software Water GIS. Đã đăng ký bản quyền.</p>
                 <div class="d-flex gap-3">
                     <a href="#" class="text-decoration-none text-secondary small">Điều khoản dịch vụ</a>
                     <a href="#" class="text-decoration-none text-secondary small">Chính sách bảo mật</a>
