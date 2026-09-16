@@ -58,72 +58,60 @@
             box-sizing: border-box;
         }
 
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-        }
-
-        body {
+        /* ==============================================================
+       1. VÙNG CHỨA EPANET: Giữ layout không ảnh hưởng đến body ngoài 
+       ============================================================== */
+        .epa-container {
             display: flex;
             flex-direction: column;
             font-family: var(--font-body);
             color: var(--ink);
             background: var(--paper);
             font-size: 15px;
-        }
-
-        h3 {
-            font-family: var(--font-display);
-            margin: 0;
-        }
-
-        button {
-            font-family: inherit;
-            cursor: pointer;
-        }
-
-        :focus-visible {
-            outline: 2px solid var(--flow);
-            outline-offset: 2px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            padding: 9px 16px;
+            /* Tự động lấp đầy khoảng trống trừ đi Topbar(~70px) và Footer(~60px) */
+            height: calc(100vh - 145px);
+            min-height: 600px;
+            width: 100%;
             border-radius: 8px;
             border: 1px solid var(--line);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 24px;
+            z-index: 1;
+        }
+
+        /* Đảm bảo leaflet map không đè lên thanh navbar của theme */
+        .epa-container #map {
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: #EEF4F3;
+        }
+
+        /* ==============================================================
+       2. CÔ LẬP CSS (SCOPING): Chỉ tác động vào bên trong .epa-container 
+       ============================================================== */
+
+        /* Ghi đè xung đột Bootstrap/Hyper Theme */
+        .epa-container .modal {
+            position: static !important;
+            height: auto !important;
+            z-index: auto !important;
+            display: flex;
+            overflow: visible !important;
+            width: 100%;
             background: #fff;
-            color: var(--ink);
-            transition: all .15s;
-            white-space: nowrap;
+            border-radius: 14px;
+            max-width: 660px;
+            max-height: 86vh;
+            flex-direction: column;
+            box-shadow: 0 40px 100px -30px rgba(11, 31, 58, 0.5);
         }
 
-        .btn:hover {
-            border-color: var(--ink);
-        }
-
-        .btn-flow {
-            background: var(--flow);
-            color: #fff;
-            border-color: var(--flow);
-        }
-
-        .btn-flow:hover {
-            background: var(--flow-deep);
-            border-color: var(--flow-deep);
-        }
-
-        .btn.sm {
-            padding: 7px 12px;
-            font-size: 0.78rem;
-        }
-
-        .topbar {
+        .epa-container .topbar {
+            position: static !important;
+            height: auto !important;
             flex: none;
             display: flex;
             align-items: center;
@@ -135,13 +123,71 @@
             flex-wrap: wrap;
         }
 
-        .tb-left {
+        .epa-container .list-group {
+            display: block !important;
+            margin-bottom: 18px;
+        }
+
+        /* Các thành phần cơ bản */
+        .epa-container h3 {
+            font-family: var(--font-display);
+            margin: 0;
+        }
+
+        .epa-container button {
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .epa-container :focus-visible {
+            outline: 2px solid var(--flow);
+            outline-offset: 2px;
+        }
+
+        .epa-container .btn {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 9px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--ink);
+            transition: all .15s;
+            white-space: nowrap;
+            box-shadow: none;
+            margin: 0;
+        }
+
+        .epa-container .btn:hover {
+            border-color: var(--ink);
+        }
+
+        .epa-container .btn-flow {
+            background: var(--flow);
+            color: #fff;
+            border-color: var(--flow);
+        }
+
+        .epa-container .btn-flow:hover {
+            background: var(--flow-deep);
+            border-color: var(--flow-deep);
+        }
+
+        .epa-container .btn.sm {
+            padding: 7px 12px;
+            font-size: 0.78rem;
+        }
+
+        .epa-container .tb-left {
             display: flex;
             align-items: center;
             gap: 14px;
         }
 
-        .brand-mini {
+        .epa-container .brand-mini {
             font-family: var(--font-display);
             font-weight: 700;
             color: var(--ink);
@@ -151,21 +197,21 @@
             gap: 6px;
         }
 
-        .tb-title {
+        .epa-container .tb-title {
             font-size: 0.85rem;
             color: var(--ink-faint);
             border-left: 1px solid var(--line);
             padding-left: 14px;
         }
 
-        .tb-right {
+        .epa-container .tb-right {
             display: flex;
             align-items: center;
             gap: 10px;
             flex-wrap: wrap;
         }
 
-        .tb-count {
+        .epa-container .tb-count {
             font-family: var(--font-mono);
             font-size: 0.72rem;
             color: var(--ink-soft);
@@ -175,7 +221,7 @@
             white-space: nowrap;
         }
 
-        .phase-banner {
+        .epa-container .phase-banner {
             flex: none;
             background: var(--flow-tint);
             color: var(--flow-deep);
@@ -185,13 +231,13 @@
             border-bottom: 1px solid var(--line);
         }
 
-        .app-shell {
+        .epa-container .app-shell {
             flex: 1;
             display: flex;
             min-height: 0;
         }
 
-        .toolbar {
+        .epa-container .toolbar {
             width: 72px;
             flex: none;
             background: #fff;
@@ -204,7 +250,7 @@
             overflow-y: auto;
         }
 
-        .tool-btn {
+        .epa-container .tool-btn {
             width: 46px;
             height: 46px;
             border-radius: 10px;
@@ -214,43 +260,40 @@
             align-items: center;
             justify-content: center;
             color: var(--ink-soft);
+            border-color: var(--line);
+            margin: 0;
+            padding: 0;
         }
 
-        .tool-btn.active {
+        .epa-container .tool-btn.active {
             background: var(--ink);
             color: #fff;
             border-color: var(--ink);
         }
 
-        .tool-btn:hover {
+        .epa-container .tool-btn:hover {
             border-color: var(--flow);
             color: var(--flow-deep);
         }
 
-        .tool-btn.active:hover {
+        .epa-container .tool-btn.active:hover {
             color: #fff;
         }
 
-        .tool-sep {
+        .epa-container .tool-sep {
             width: 30px;
             height: 1px;
             background: var(--line);
             margin: 6px 0;
         }
 
-        .map-wrap {
+        .epa-container .map-wrap {
             flex: 1;
             min-width: 0;
             position: relative;
         }
 
-        #map {
-            width: 100%;
-            height: 100%;
-            background: #EEF4F3;
-        }
-
-        .map-hint {
+        .epa-container .map-hint {
             position: absolute;
             top: 14px;
             left: 14px;
@@ -265,11 +308,11 @@
             box-shadow: 0 10px 24px -16px rgba(11, 31, 58, 0.35);
         }
 
-        .map-hint b {
+        .epa-container .map-hint b {
             color: var(--ink);
         }
 
-        .map-layers {
+        .epa-container .map-layers {
             position: absolute;
             bottom: 14px;
             left: 14px;
@@ -282,20 +325,21 @@
             font-size: 0.78rem;
         }
 
-        .map-layers label {
+        .epa-container .map-layers label {
             display: flex;
             align-items: center;
             gap: 6px;
             padding: 3px 0;
             color: var(--ink-soft);
             cursor: pointer;
+            margin: 0;
         }
 
-        .map-layers input {
+        .epa-container .map-layers input {
             accent-color: var(--flow);
         }
 
-        .map-legend {
+        .epa-container .map-legend {
             position: absolute;
             bottom: 14px;
             right: 14px;
@@ -309,7 +353,7 @@
             max-width: 230px;
         }
 
-        .legend-title {
+        .epa-container .legend-title {
             font-family: var(--font-mono);
             font-size: 0.68rem;
             text-transform: uppercase;
@@ -318,7 +362,7 @@
             margin-bottom: 6px;
         }
 
-        .legend-row {
+        .epa-container .legend-row {
             display: flex;
             align-items: center;
             gap: 7px;
@@ -326,27 +370,28 @@
             color: var(--ink-soft);
         }
 
-        .legend-dot {
+        .epa-container .legend-dot {
             width: 10px;
             height: 10px;
             border-radius: 50%;
             flex: none;
         }
 
-        .leaflet-popup-content {
+        .epa-container .leaflet-popup-content {
             font-family: var(--font-body);
             font-size: 0.83rem;
             color: var(--ink);
             line-height: 1.5;
+            margin: 13px 19px;
         }
 
-        .leaflet-control-layers {
+        .epa-container .leaflet-control-layers {
             font-family: var(--font-body);
             font-size: 0.82rem;
             border-radius: 8px !important;
         }
 
-        .panel {
+        .epa-container .panel {
             width: 380px;
             flex: none;
             background: #fff;
@@ -356,13 +401,13 @@
             min-height: 0;
         }
 
-        .tabs {
+        .epa-container .tabs {
             display: flex;
             border-bottom: 1px solid var(--line);
             flex: none;
         }
 
-        .tab-btn {
+        .epa-container .tab-btn {
             flex: 1;
             padding: 12px 2px;
             border: none;
@@ -373,12 +418,12 @@
             border-bottom: 2px solid transparent;
         }
 
-        .tab-btn.active {
+        .epa-container .tab-btn.active {
             color: var(--ink);
             border-color: var(--flow);
         }
 
-        .tab-pane {
+        .epa-container .tab-pane {
             display: none;
             flex: 1;
             min-height: 0;
@@ -386,25 +431,25 @@
             padding: 20px;
         }
 
-        .tab-pane.active {
+        .epa-container .tab-pane.active {
             display: block;
         }
 
-        .prop-header {
+        .epa-container .prop-header {
             display: flex;
             align-items: center;
             gap: 10px;
             margin-bottom: 18px;
         }
 
-        .prop-dot {
+        .epa-container .prop-dot {
             width: 12px;
             height: 12px;
             border-radius: 3px;
             flex: none;
         }
 
-        .prop-type {
+        .epa-container .prop-type {
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 0.06em;
@@ -412,20 +457,20 @@
             font-family: var(--font-mono);
         }
 
-        .prop-id {
+        .epa-container .prop-id {
             font-family: var(--font-display);
             font-weight: 700;
             font-size: 1.1rem;
         }
 
-        .prop-fields {
+        .epa-container .prop-fields {
             display: flex;
             flex-direction: column;
             gap: 14px;
             margin-bottom: 18px;
         }
 
-        .prop-field {
+        .epa-container .prop-field {
             display: flex;
             flex-direction: column;
             gap: 6px;
@@ -433,8 +478,8 @@
             color: var(--ink-soft);
         }
 
-        .prop-field input,
-        .prop-field select {
+        .epa-container .prop-field input,
+        .epa-container .prop-field select {
             font-family: var(--font-mono);
             font-size: 0.9rem;
             padding: 9px 10px;
@@ -443,14 +488,16 @@
             color: var(--ink);
             background: #FBFDFC;
             width: 100%;
+            box-shadow: none;
+            outline: none;
         }
 
-        .prop-field input:focus,
-        .prop-field select:focus {
+        .epa-container .prop-field input:focus,
+        .epa-container .prop-field select:focus {
             border-color: var(--flow);
         }
 
-        .prop-endpoints {
+        .epa-container .prop-endpoints {
             font-size: 0.82rem;
             color: var(--ink-soft);
             background: var(--flow-tint);
@@ -459,30 +506,26 @@
             margin-bottom: 18px;
         }
 
-        .prop-delete {
+        .epa-container .prop-delete {
             width: 100%;
             justify-content: center;
             border-color: var(--pressure);
             color: var(--pressure);
         }
 
-        .prop-delete:hover {
+        .epa-container .prop-delete:hover {
             background: var(--pressure-tint);
             border-color: var(--pressure);
         }
 
-        .prop-empty p {
+        .epa-container .prop-empty p {
             color: var(--ink-soft);
             font-size: 0.87rem;
             margin-bottom: 10px;
             line-height: 1.6;
         }
 
-        .list-group {
-            margin-bottom: 18px;
-        }
-
-        .list-group-title {
+        .epa-container .list-group-title {
             display: flex;
             justify-content: space-between;
             font-family: var(--font-mono);
@@ -495,7 +538,7 @@
             border-bottom: 1px solid var(--line);
         }
 
-        .list-row {
+        .epa-container .list-row {
             padding: 8px 10px;
             border-radius: 7px;
             font-size: 0.86rem;
@@ -503,32 +546,33 @@
             display: flex;
             justify-content: space-between;
             gap: 8px;
+            margin: 0;
         }
 
-        .list-row:hover {
+        .epa-container .list-row:hover {
             background: var(--flow-tint);
         }
 
-        .list-sub {
+        .epa-container .list-sub {
             color: var(--ink-faint);
             font-family: var(--font-mono);
             font-size: 0.76rem;
         }
 
-        .list-empty {
+        .epa-container .list-empty {
             color: var(--ink-faint);
             font-size: 0.8rem;
             padding: 4px 10px;
         }
 
-        .json-note {
+        .epa-container .json-note {
             font-size: 0.82rem;
             color: var(--ink-soft);
             margin-bottom: 12px;
             line-height: 1.5;
         }
 
-        .json-pre {
+        .epa-container .json-pre {
             background: #0B1F3A;
             color: #BFE3E6;
             font-family: var(--font-mono);
@@ -542,34 +586,22 @@
             margin: 0;
         }
 
-        /* ---------- Import modal ---------- */
-        .modal-overlay {
+        .epa-container .modal-overlay {
             position: fixed;
             inset: 0;
             background: rgba(11, 31, 58, 0.55);
-            z-index: 2000;
+            z-index: 2000 !important;
             display: none;
             align-items: center;
             justify-content: center;
             padding: 20px;
         }
 
-        .modal-overlay.open {
+        .epa-container .modal-overlay.open {
             display: flex;
         }
 
-        .modal {
-            background: #fff;
-            border-radius: 14px;
-            max-width: 660px;
-            width: 100%;
-            max-height: 86vh;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 40px 100px -30px rgba(11, 31, 58, 0.5);
-        }
-
-        .modal-head {
+        .epa-container .modal-head {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -578,11 +610,11 @@
             flex: none;
         }
 
-        .modal-head h3 {
+        .epa-container .modal-head h3 {
             font-size: 1.05rem;
         }
 
-        .modal-close {
+        .epa-container .modal-close {
             background: none;
             border: none;
             font-size: 1.2rem;
@@ -591,28 +623,30 @@
             height: 32px;
             border-radius: 7px;
             line-height: 1;
+            padding: 0;
         }
 
-        .modal-close:hover {
+        .epa-container .modal-close:hover {
             background: var(--flow-tint);
             color: var(--ink);
         }
 
-        .modal-body {
-            padding: 20px 22px;
+        .epa-container .modal-body {
+            padding: 20px 22px !important;
             overflow-y: auto;
             flex: 1;
             min-height: 0;
+            position: static !important;
         }
 
-        .modal-body p {
+        .epa-container .modal-body p {
             color: var(--ink-soft);
             font-size: 0.87rem;
             margin-bottom: 14px;
             line-height: 1.55;
         }
 
-        .modal-body code {
+        .epa-container .modal-body code {
             font-family: var(--font-mono);
             background: var(--flow-tint);
             padding: 2px 6px;
@@ -620,7 +654,7 @@
             font-size: 0.8rem;
         }
 
-        .modal-foot {
+        .epa-container .modal-foot {
             display: flex;
             justify-content: flex-end;
             gap: 10px;
@@ -629,25 +663,25 @@
             flex: none;
         }
 
-        .file-input-row {
+        .epa-container .file-input-row {
             border: 1.5px dashed var(--line);
             border-radius: 10px;
             padding: 18px;
             margin-bottom: 8px;
         }
 
-        .file-input-row input {
+        .epa-container .file-input-row input {
             font-size: 0.84rem;
         }
 
-        .import-table {
+        .epa-container .import-table {
             width: 100%;
             border-collapse: collapse;
             font-size: 0.83rem;
             margin-top: 14px;
         }
 
-        .import-table th {
+        .epa-container .import-table th {
             text-align: left;
             color: var(--ink-faint);
             font-family: var(--font-mono);
@@ -658,13 +692,13 @@
             border-bottom: 1px solid var(--line);
         }
 
-        .import-table td {
+        .epa-container .import-table td {
             padding: 7px 8px;
             border-bottom: 1px solid var(--line);
             vertical-align: middle;
         }
 
-        .import-table select {
+        .epa-container .import-table select {
             font-family: var(--font-body);
             font-size: 0.82rem;
             padding: 5px 7px;
@@ -673,7 +707,7 @@
             background: #fff;
         }
 
-        .import-warn {
+        .epa-container .import-warn {
             background: var(--pressure-tint);
             color: #B34428;
             border-radius: 8px;
@@ -683,7 +717,7 @@
             line-height: 1.5;
         }
 
-        .import-ok {
+        .epa-container .import-ok {
             background: var(--flow-tint);
             color: var(--flow-deep);
             border-radius: 8px;
@@ -692,12 +726,11 @@
             margin-top: 14px;
         }
 
-        /* ---------- Simulation results ---------- */
-        .sim-controls {
+        .epa-container .sim-controls {
             margin-bottom: 16px;
         }
 
-        .scenario-desc {
+        .epa-container .scenario-desc {
             font-size: 0.82rem;
             color: var(--ink-soft);
             background: #FBFDFC;
@@ -708,7 +741,7 @@
             line-height: 1.5;
         }
 
-        .sim-status-ok {
+        .epa-container .sim-status-ok {
             background: var(--flow-tint);
             color: var(--flow-deep);
             border-radius: 8px;
@@ -718,7 +751,7 @@
             margin-bottom: 14px;
         }
 
-        .sim-status-warn {
+        .epa-container .sim-status-warn {
             background: var(--pressure-tint);
             color: #B34428;
             border-radius: 8px;
@@ -728,21 +761,21 @@
             margin-bottom: 14px;
         }
 
-        .sim-cards {
+        .epa-container .sim-cards {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 8px;
             margin-bottom: 16px;
         }
 
-        .sim-card {
+        .epa-container .sim-card {
             background: #FBFDFC;
             border: 1px solid var(--line);
             border-radius: 9px;
             padding: 11px 12px;
         }
 
-        .sim-card .sc-label {
+        .epa-container .sim-card .sc-label {
             font-family: var(--font-mono);
             font-size: 0.66rem;
             text-transform: uppercase;
@@ -751,30 +784,32 @@
             margin-bottom: 4px;
         }
 
-        .sim-card .sc-value {
+        .epa-container .sim-card .sc-value {
             font-family: var(--font-display);
             font-weight: 700;
             font-size: 1.15rem;
         }
 
-        .sim-card .sc-value.warn {
+        .epa-container .sim-card .sc-value.warn {
             color: var(--pressure);
         }
 
-        .sim-table-wrap {
+        .epa-container .sim-table-wrap {
             max-height: 320px;
             overflow-y: auto;
             border: 1px solid var(--line);
             border-radius: 8px;
+            margin: 0;
         }
 
-        .sim-table {
+        .epa-container .sim-table {
             width: 100%;
             border-collapse: collapse;
             font-size: 0.8rem;
+            margin: 0;
         }
 
-        .sim-table th {
+        .epa-container .sim-table th {
             position: sticky;
             top: 0;
             background: #FBFDFC;
@@ -787,17 +822,17 @@
             border-bottom: 1px solid var(--line);
         }
 
-        .sim-table td {
+        .epa-container .sim-table td {
             padding: 6px 8px;
             border-bottom: 1px solid var(--line);
             font-family: var(--font-mono);
         }
 
-        .sim-table tr.low-pressure td {
+        .epa-container .sim-table tr.low-pressure td {
             background: var(--pressure-tint);
         }
 
-        .sim-section-title {
+        .epa-container .sim-section-title {
             font-family: var(--font-mono);
             font-size: 0.7rem;
             text-transform: uppercase;
@@ -806,19 +841,19 @@
             margin: 16px 0 8px;
         }
 
-        .export-btn-row {
+        .epa-container .export-btn-row {
             display: flex;
             gap: 8px;
             margin-top: 14px;
         }
 
-        .export-btn-row .btn {
+        .epa-container .export-btn-row .btn {
             flex: 1;
             justify-content: center;
         }
 
         @media (max-width:820px) {
-            .panel {
+            .epa-container .panel {
                 position: fixed;
                 right: 0;
                 top: 0;
@@ -827,7 +862,7 @@
                 box-shadow: -20px 0 40px -20px rgba(11, 31, 58, 0.4);
             }
 
-            .tb-title {
+            .epa-container .tb-title {
                 display: none;
             }
         }
@@ -958,10 +993,10 @@
         <div class="content-page">
             <div class="content">
                 <!-- Start Content-->
-                <div class="container-fluid" style="position: relative; z-index: 1;">
+                <div class="container-fluid">
 
                     <!-- Bọc toàn bộ nội dung vào một khối flex để căn giữa theo chiều dọc -->
-                    <div class="row ">
+                    <div class="epa-container ">
                         <div class="topbar">
                             <div class="tb-right">
                                 <span class="tb-count" id="countBadge">0 nguồn · 0 bể · 0 nút · 0 ống · 0 bơm · 0
