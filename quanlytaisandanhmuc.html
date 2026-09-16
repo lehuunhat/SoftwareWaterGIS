@@ -64,7 +64,7 @@
         <div class="navbar-custom">
             <div class="topbar container-fluid">
                 <div class="d-flex align-items-center gap-lg-2 gap-1">
-                    <a class="logo-lg">
+                    <a href="index.html" class="logo-lg">
                         <img src="assets/images/logo.webp" alt="logo">
                     </a>
                     <span class="d-lg-flex flex-column gap-1 d-none">
@@ -72,36 +72,44 @@
                             Software Water GIS
                         </h4>
                     </span>
-                </div>
-                <ul class="list-unstyled d-none d-lg-flex mb-0 ms-2 gap-3 align-items-center font-15" id="mainMenu">
+                    <ul class="list-unstyled d-none d-lg-flex mb-0 ms-2 gap-3 align-items-center font-15" id="mainMenu">
 
-                    <li>
-                        <a href="index.html"
-                            class="text-body fw-semibold d-flex align-items-center gap-1 hover-primary">
-                            <i class="mdi mdi-home fs-4"></i> <span data-vi="Tổng quan" data-en="Overview">
-                                Tổng quan </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="map.html" class="text-body fw-semibold d-flex align-items-center gap-1 hover-primary">
-                            <i class="mdi mdi-map fs-4"></i> <span data-vi="Bản đồ" data-en="Map"> Bản đồ
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="index.html"
-                            class="text-body fw-semibold d-flex align-items-center gap-1 hover-primary">
-                            <i class="mdi mdi-home fs-4"></i> <span data-vi="Danh mục" data-en="Catalog"> Danh
-                                mục </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="map.html" class="text-body fw-semibold d-flex align-items-center gap-1 hover-primary">
-                            <i class="mdi mdi-map fs-4"></i> <span data-vi="Thống kê báo cáo" data-en="Reports">
-                                Thống kê báo cáo </span>
-                        </a>
-                    </li>
-                </ul>
+                        <li>
+                            <a href="quanlytaisan.html"
+                                class="text-body fw-semibold d-flex align-items-center gap-1 hover-primary">
+                                <i class="mdi mdi-home fs-4"></i> <span data-vi="Tổng quan" data-en="Overview">
+                                    Tổng quan </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="quanlytaisanbando.html"
+                                class="text-body fw-semibold d-flex align-items-center gap-1 hover-primary">
+                                <i class="mdi mdi-map fs-4"></i> <span data-vi="Bản đồ" data-en="Map"> Bản đồ
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="quanlytaisandanhmuc.html"
+                                class="text-body fw-semibold d-flex align-items-center gap-1 hover-primary">
+                                <i class="mdi mdi-format-list-bulleted fs-4"></i> <span data-vi="Danh mục"
+                                    data-en="Category"> Danh
+                                    mục </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="quanlytaisanthongke.html"
+                                class="text-body fw-semibold d-flex align-items-center gap-1 hover-primary">
+                                <i class="mdi mdi-chart-bar fs-4"></i> <span data-vi="Thống kê báo cáo"
+                                    data-en="Statistical report">
+                                    Thống kê báo cáo </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Mở menu"
+                        aria-controls="mobileSidePanel" aria-expanded="false">
+                        <i class="mdi mdi-menu"></i>
+                    </button>
+                </div>
 
                 <ul class="topbar-menu d-flex align-items-center gap-3">
                     <li class="dropdown">
@@ -150,6 +158,55 @@
                 </ul>
             </div>
         </div>
+
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+        <aside class="mobile-side-panel" id="mobileSidePanel" aria-hidden="true">
+            <div class="mobile-side-panel-header">
+                <img src="assets/images/logo.webp" alt="logo">
+                <span class="d-lg-flex flex-column">
+                    <h5 class="my-0 text-center text-uppercase " style="line-height: 2">
+                        Software Water GIS</h5>
+                </span>
+                <button type="button" class="mobile-side-panel-close" id="mobileMenuClose" aria-label="Đóng menu">
+                    <i class="mdi mdi-close"></i>
+                </button>
+            </div>
+
+            <ul class="mobile-side-menu" id="mobileMenu">
+                <li>
+                    <a href="quanlytaisan.html"
+                        class="text-body fw-semibold d-flex align-items-center gap-1 hover-primary">
+                        <i class="mdi mdi-home fs-4"></i> <span data-vi="Tổng quan" data-en="Overview">
+                            Tổng quan </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="quanlytaisanbando.html"
+                        class="text-body fw-semibold d-flex align-items-center gap-1 hover-primary">
+                        <i class="mdi mdi-map fs-4"></i> <span data-vi="Bản đồ" data-en="Map"> Bản đồ
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="quanlytaisandanhmuc.html"
+                        class="text-body fw-semibold d-flex align-items-center gap-1 hover-primary">
+                        <i class="mdi mdi-format-list-bulleted fs-4"></i> <span data-vi="Danh mục" data-en="Category">
+                            Danh
+                            mục </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="quanlytaisanthongke.html"
+                        class="text-body fw-semibold d-flex align-items-center gap-1 hover-primary">
+                        <i class="mdi mdi-chart-bar fs-4"></i> <span data-vi="Thống kê báo cáo"
+                            data-en="Statistical report">
+                            Thống kê báo cáo </span>
+                    </a>
+                </li>
+            </ul>
+
+        </aside>
         <!-- ========== Topbar End ========== -->
 
         <div class="page-wrapper">
@@ -255,85 +312,94 @@
                                                                     <tbody>
                                                                         <tr>
                                                                             <td>1</td>
-                                                                            <td>Hồ sơ hoàn công</td>
-
-
+                                                                            <!-- Đổi từ Dĩ An BIWASE -->
+                                                                            <td>PB HUEWACO</td>
+                                                                            <td>Phú Bài HueWACO</td>
+                                                                            <td>Chi nhánh Cấp nước Phú Bài</td>
+                                                                            <td>Cấp Nước</td>
                                                                             <td class="text-center">
-
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary"><i
+                                                                                        class="mdi mdi-pencil-outline font-16"
                                                                                         title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger"><i
+                                                                                        class="mdi mdi-trash-can-outline font-16"
                                                                                         title="Xóa"></i></a>
                                                                             </td>
-                                                                        </tr><!--end tr-->
+                                                                        </tr>
                                                                         <tr>
                                                                             <td>2</td>
-                                                                            <td>Hình ảnh đính kèm</td>
-
-
-                                                                            <td class="text-center">
-
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
+                                                                            <!-- Đổi từ KLH Bình Dương BIWASE -->
+                                                                            <td>TP HUEWACO</td>
+                                                                            <td>TP Huế HueWACO</td>
+                                                                            <td>Chi nhánh Cấp nước TP. Huế</td>
+                                                                            <td>Cấp Nước</td>
+                                                                            <td class=" text-center">
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary"><i
+                                                                                        class="mdi mdi-pencil-outline font-16"
                                                                                         title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger"><i
+                                                                                        class="mdi mdi-trash-can-outline font-16"
                                                                                         title="Xóa"></i></a>
                                                                             </td>
-                                                                        </tr><!--end tr-->
+                                                                        </tr>
                                                                         <tr>
                                                                             <td>3</td>
-                                                                            <td>Hồ sơ hố thi công hố gas</td>
-
-
+                                                                            <!-- Đổi từ Bàu Bàng BIWASE -->
+                                                                            <td>HT HUEWACO</td>
+                                                                            <td>Hương Trà HueWACO</td>
+                                                                            <td>Chi nhánh Cấp nước Hương Trà</td>
+                                                                            <td>Cấp Nước</td>
                                                                             <td class="text-center">
-
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary"><i
+                                                                                        class="mdi mdi-pencil-outline font-16"
                                                                                         title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger"><i
+                                                                                        class="mdi mdi-trash-can-outline font-16"
                                                                                         title="Xóa"></i></a>
                                                                             </td>
-                                                                        </tr><!--end tr-->
+                                                                        </tr>
                                                                         <tr>
                                                                             <td>4</td>
-                                                                            <td>HS_TS Máy phát điện CN Dĩ An</td>
-
-
+                                                                            <!-- Đổi từ Tân Uyên BIWASE -->
+                                                                            <td>PL HUEWACO</td>
+                                                                            <td>Phú Lộc HueWACO</td>
+                                                                            <td>Chi nhánh Cấp nước Phú Lộc</td>
+                                                                            <td>Cấp Nước</td>
                                                                             <td class="text-center">
-
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary"><i
+                                                                                        class="mdi mdi-pencil-outline font-16"
                                                                                         title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger"><i
+                                                                                        class="mdi mdi-trash-can-outline font-16"
                                                                                         title="Xóa"></i></a>
                                                                             </td>
-                                                                        </tr><!--end tr-->
+                                                                        </tr>
                                                                         <tr>
                                                                             <td>5</td>
-                                                                            <td>Hồ sơ mời thầu dự án tuyến ống cấp nước
-                                                                                TDM</td>
-
-
+                                                                            <!-- Đổi từ Nước BIWASE Bình Phước -->
+                                                                            <td>PĐ HUEWACO</td>
+                                                                            <td>Phong Điền HueWACO</td>
+                                                                            <td>Chi nhánh Cấp nước Phong Điền</td>
+                                                                            <td>Thoát Nước</td>
                                                                             <td class="text-center">
-
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary"><i
+                                                                                        class="mdi mdi-pencil-outline font-16"
                                                                                         title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger"><i
+                                                                                        class="mdi mdi-trash-can-outline font-16"
                                                                                         title="Xóa"></i></a>
                                                                             </td>
-                                                                        </tr><!--end tr-->
-
-
-
-
-
+                                                                        </tr>
                                                                     </tbody>
                                                                 </table>
                                                             </div>
@@ -418,12 +484,18 @@
                                                                             <td>Bể ống nước</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -431,12 +503,18 @@
                                                                             <td>Sự cố hỏng van</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -444,12 +522,18 @@
                                                                             <td>Sự cố hỏng đồng hồ tổng</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -458,12 +542,18 @@
 
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                     </tbody>
@@ -550,12 +640,18 @@
                                                                             <td>Nguồn nợ phải trả</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -563,12 +659,18 @@
                                                                             <td>Nguồn vốn chủ sở hữu</td>
                                                                             <td class=" text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                     </tbody>
@@ -655,12 +757,18 @@
                                                                             <td>Bảo trì sữa chữa</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -668,12 +776,18 @@
                                                                             <td>Hết hạn sử dụng</td>
                                                                             <td class=" text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -681,12 +795,18 @@
                                                                             <td>Hoạt động bình thường</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                     </tbody>
@@ -773,12 +893,18 @@
                                                                             <td>Đã báo giảm</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -786,12 +912,18 @@
                                                                             <td>Dư thừa</td>
                                                                             <td class=" text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -799,12 +931,18 @@
                                                                             <td>Lưu kho</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -812,12 +950,18 @@
                                                                             <td>Đang sử dụng</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                     </tbody>
@@ -904,12 +1048,18 @@
                                                                             <td>Trạm</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -917,12 +1067,18 @@
                                                                             <td>Tờ</td>
                                                                             <td class=" text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -930,12 +1086,18 @@
                                                                             <td>M</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -943,12 +1105,18 @@
                                                                             <td>KW</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -956,12 +1124,18 @@
                                                                             <td>Hố</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                     </tbody>
@@ -1048,12 +1222,18 @@
                                                                             <td>Phụ tùng</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -1061,12 +1241,18 @@
                                                                             <td>Thành phần</td>
                                                                             <td class=" text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                     </tbody>
@@ -1153,12 +1339,18 @@
                                                                             <td>Giấy tờ</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -1166,12 +1358,18 @@
                                                                             <td>Thông số kỹ thuật</td>
                                                                             <td class=" text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -1179,12 +1377,18 @@
                                                                             <td>Thuộc tính định danh</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                 </table>
@@ -1272,12 +1476,18 @@
                                                                             <td>Xử lý chất thải</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -1286,12 +1496,18 @@
                                                                             <td>Xây lắp</td>
                                                                             <td class=" text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -1300,12 +1516,18 @@
                                                                             <td>Thoát nước</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -1314,12 +1536,18 @@
                                                                             <td>Cấp nước</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -1328,12 +1556,18 @@
                                                                             <td>Phân bón & gạch</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                     </tbody>
@@ -1426,12 +1660,18 @@
                                                                             <td>Cấp Nước</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -1443,12 +1683,18 @@
                                                                             <td>Cấp Nước</td>
                                                                             <td class=" text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -1459,12 +1705,18 @@
                                                                             <td>Cấp Nước</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -1475,12 +1727,18 @@
                                                                             <td>Cấp Nước</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                         <tr>
@@ -1492,12 +1750,18 @@
                                                                             <td>Thoát Nước</td>
                                                                             <td class="text-center">
 
-                                                                                <a href="#"><i
-                                                                                        class="las la-pen text-secondary font-16"
-                                                                                        title="Sửa"></i></a>
-                                                                                <a href="#"><i
-                                                                                        class="las la-trash-alt text-secondary font-16"
-                                                                                        title="Xóa"></i></a>
+                                                                                <a href="#"
+                                                                                    class="action-icon text-primary">
+                                                                                    <i class="mdi mdi-pencil-outline font-16"
+                                                                                        title="Sửa"></i>
+                                                                                </a>
+
+                                                                                <!-- Nút Xóa (Màu đỏ) -->
+                                                                                <a href="#"
+                                                                                    class="action-icon text-danger">
+                                                                                    <i class="mdi mdi-trash-can-outline font-16"
+                                                                                        title="Xóa"></i>
+                                                                                </a>
                                                                             </td>
                                                                         </tr><!--end tr-->
                                                                     </tbody>
@@ -1717,7 +1981,70 @@
                         conditionChart.render();
                     }
                 }
+                // ==========================================
+                // 1. XỬ LÝ ĐÓNG/MỞ MENU MOBILE
+                // ==========================================
+                const toggle = document.getElementById('mobileMenuToggle');
+                const close = document.getElementById('mobileMenuClose');
+                const panel = document.getElementById('mobileSidePanel');
+                const overlay = document.getElementById('mobileMenuOverlay');
 
+                if (toggle && close && panel && overlay) {
+                    function openMobileMenu() {
+                        panel.classList.add('show');
+                        overlay.classList.add('show');
+                        panel.setAttribute('aria-hidden', 'false');
+                        toggle.setAttribute('aria-expanded', 'true');
+                        document.body.style.overflow = 'hidden';
+                    }
+
+                    function closeMobileMenu() {
+                        panel.classList.remove('show');
+                        overlay.classList.remove('show');
+                        panel.setAttribute('aria-hidden', 'true');
+                        toggle.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = '';
+                    }
+
+                    toggle.addEventListener('click', openMobileMenu);
+                    close.addEventListener('click', closeMobileMenu);
+                    overlay.addEventListener('click', closeMobileMenu);
+
+                    panel.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', closeMobileMenu);
+                    });
+
+                    document.addEventListener('keydown', function (event) {
+                        if (event.key === 'Escape') {
+                            closeMobileMenu();
+                        }
+                    });
+                }
+                // ==========================================
+                // 3. XỬ LÝ ACTIVE LINK KHI CHUYỂN TRANG
+                // ==========================================
+                function getControllerName(path) {
+                    const clean = path.toLowerCase().split('?')[0].split('#')[0];
+                    const segments = clean.split('/').filter(s => s.length > 0);
+                    if (segments.length === 0) return 'home';
+                    if (segments[0] === 'index') return 'home';
+                    return segments[0];
+                }
+                const currentController = getControllerName(window.location.pathname);
+                const navLinks = document.querySelectorAll("#mainMenu a, #mobileMenu a");
+
+                navLinks.forEach(link => {
+                    const href = link.getAttribute("href");
+                    if (!href || href === "#") return;
+
+                    const linkController = getControllerName(href);
+
+                    if (linkController === currentController) {
+                        link.classList.add("active");
+                        link.classList.remove("fw-semibold");
+                        link.classList.add("fw-bold");
+                    }
+                });
                 // ==============================
                 // 4. FOOTER / THEME
                 // ==============================
