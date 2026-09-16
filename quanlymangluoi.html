@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Software Water GIS - Home</title>
+    <title>Software Water GIS - Quản lý mạng lưới</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
     <meta content="DiaDu" name="author">
@@ -36,13 +36,23 @@
     <link href="client.css" rel="stylesheet" type="text/css">
 
     <style>
-        /* Tùy chỉnh chiều cao bản đồ hiển thị trên giao diện */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
         #map {
-            /* width: 100% */
-            height: calc(100vh - 220px);
-            min-height: 550px;
-            border-radius: 4px;
-            z-index: 1;
+            height: calc(100vh - 130px);
+        }
+
+        .leaflet-sidebar {
+            z-index: 401;
+        }
+
+        .leaflet-top,
+        .leaflet-bottom {
+            z-index: 400;
         }
     </style>
 </head>
@@ -55,7 +65,7 @@
         <div class="navbar-custom">
             <div class="topbar container-fluid">
                 <div class="d-flex align-items-center gap-lg-2 gap-1">
-                    <a class="logo-lg">
+                    <a href="index.html" class="logo-lg">
                         <img src="assets/images/logo.webp" alt="logo">
                     </a>
                     <span class="d-lg-flex flex-column gap-1 d-none">
