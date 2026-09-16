@@ -78,7 +78,7 @@
 
                     <div class="app-search dropdown d-none d-lg-block">
                         <div>
-                            <h4 class="page-title">Cấu hình kết nối GeoServer</h4>
+                            <h4 class="page-title">Cấu hình email</h4>
                         </div>
                     </div>
                 </div>
@@ -486,9 +486,10 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="card-header d-flex justify-content-between align-items-center">
-                                        <h5 class="header-title mb-0">Thông tin kết nối</h5>
-                                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#UpdateGeoServerModal">
-                                            <i class="mdi mdi-pencil me-1"></i> Cập nhật cấu hình
+                                        <h5 class="header-title mb-0">Thông tin email hệ thống</h5>
+                                        <!-- Đổi ID modal target sang UpdateEmailModal -->
+                                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#UpdateEmailModal">
+                                            <i class="mdi mdi-pencil me-1"></i> Cấu hình email
                                         </button>
                                     </div>
 
@@ -496,37 +497,40 @@
                                         <!-- CỘT TRÁI -->
                                         <div class="col-md-6">
                                             <div class="row mb-3">
-                                                <div class="col-sm-4 fw-bold text-muted">Đường dẫn máy chủ:</div>
+                                                <div class="col-sm-4 fw-bold text-muted">Máy chủ SMTP:</div>
                                                 <div class="col-sm-8 text-primary" style="word-break: break-all;">
-                                                    http://192.168.1.100:8080/geoserver
+                                                    smtp.gmail.com
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
-                                                <div class="col-sm-4 fw-bold text-muted">Không gian làm việc:</div>
-                                                <div class="col-sm-8">water_network_ws</div>
+                                                <div class="col-sm-4 fw-bold text-muted">Cổng (Port):</div>
+                                                <div class="col-sm-8"><span class="badge bg-secondary">587</span></div>
                                             </div>
                                             <div class="row mb-3">
-                                                <div class="col-sm-4 fw-bold text-muted">Hệ tọa độ mặc định:</div>
-                                                <div class="col-sm-8"><span class="badge bg-secondary">EPSG:4326</span></div>
+                                                <div class="col-sm-4 fw-bold text-muted">Lần kiểm tra cuối:</div>
+                                                <div class="col-sm-8">16/09/2026 09:30 AM</div>
                                             </div>
+                                            
                                         </div>
 
                                         <!-- CỘT PHẢI -->
                                         <div class="col-md-6">
+                                            <div class="row mb-3">
+                                                <div class="col-sm-4 fw-bold text-muted">Tài khoản Email:</div>
+                                                <div class="col-sm-8">noreply@yourdomain.com</div>
+                                            </div>
                                             <!-- <div class="row mb-3">
-                                                <div class="col-sm-4 fw-bold text-muted">Tài khoản quản trị:</div>
-                                                <div class="col-sm-8">admin</div>
+                                                <div class="col-sm-4 fw-bold text-muted">Giao thức bảo mật:</div>
+                                                <div class="col-sm-8">TLS</div>
                                             </div> -->
                                             <div class="row mb-3">
-                                                <div class="col-sm-4 fw-bold text-muted">Trạng thái kết nối:</div>
+                                                <div class="col-sm-4 fw-bold text-muted">Trạng thái:</div>
                                                 <div class="col-sm-8">
-                                                    <span class="badge bg-success"><i class="mdi mdi-check-circle"></i> Đang kết nối</span>
+                                                    <span class="badge bg-success"><i class="mdi mdi-check-circle"></i> Hoạt động</span>
                                                 </div>
                                             </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm-4 fw-bold text-muted">Lần kiểm tra cuối:</div>
-                                                <div class="col-sm-8">15/09/2026 09:30 AM</div>
-                                            </div>
+                                            
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1412,54 +1416,53 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="UpdateGeoServerModal" tabindex="-1" aria-labelledby="UpdateGeoServerLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg"> <!-- Dùng modal-lg cho form nhiều trường -->
+    <div class="modal fade" id="UpdateEmailModal" tabindex="-1" aria-labelledby="UpdateEmailLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg"> <!-- Giữ nguyên modal-lg cho form rộng rãi -->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="UpdateGeoServerLabel">Cập nhật cấu hình GeoServer</h5>
+                    <h5 class="modal-title" id="UpdateEmailLabel">Cập nhật cấu hình Email hệ thống</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-3">
                     <div class="row g-3">
-                        <div class="col-md-12">
-                            <label for="geoUrl" class="form-label">Đường dẫn máy chủ (URL)</label>
-                            <input type="text" class="form-control" id="geoUrl" placeholder="VD: http://192.168.1.100:8080/geoserver" value="http://192.168.1.100:8080/geoserver" />
+                        <div class="col-md-6">
+                            <label for="emailSmtp" class="form-label">Máy chủ SMTP</label>
+                            <input type="text" class="form-control" id="emailSmtp" placeholder="VD: smtp.gmail.com" value="smtp.gmail.com" />
                         </div>
                         
                         <div class="col-md-6">
-                            <label for="geoWorkspace" class="form-label">Không gian làm việc (Workspace)</label>
-                            <input type="text" class="form-control" id="geoWorkspace" placeholder="Nhập tên workspace..." value="water_network_ws" />
+                            <label for="emailPort" class="form-label">Cổng (Port)</label>
+                            <input type="number" class="form-control" id="emailPort" placeholder="VD: 587" value="587" />
                         </div>
                         
                         <div class="col-md-6">
-                            <label for="geoCrs" class="form-label">Hệ tọa độ mặc định (CRS)</label>
-                            <select class="form-select select2" id="geoCrs" data-toggle="select2">
-                                <option value="EPSG:4326" selected>EPSG:4326 (WGS 84)</option>
-                                <option value="EPSG:3857">EPSG:3857 (Web Mercator)</option>
-                                <option value="EPSG:3405">EPSG:3405 (VN2000 - Nội bộ)</option>
-                            </select>
+                            <label for="emailAccount" class="form-label">Tài khoản Email</label>
+                            <input type="email" class="form-control" id="emailAccount" placeholder="VD: noreply@yourdomain.com" value="noreply@yourdomain.com" />
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <label for="emailPassword" class="form-label">Mật khẩu / App Password</label>
+                            <input type="password" class="form-control" id="emailPassword" placeholder="Nhập mật khẩu..." value="" />
                         </div>
 
                         <!-- <div class="col-md-6">
-                            <label for="geoUsername" class="form-label">Tài khoản quản trị</label>
-                            <input type="text" class="form-control" id="geoUsername" placeholder="Nhập tài khoản GeoServer..." value="admin" />
-                        </div>
-
-                        <div class="col-md-6">
-                            <label for="geoPassword" class="form-label">Mật khẩu</label>
-                            <input type="password" class="form-control" id="geoPassword" placeholder="Nhập mật khẩu..." value="geoserver" />
+                            <label for="emailProtocol" class="form-label">Giao thức bảo mật</label>
+                            <select class="form-select select2" id="emailProtocol" data-toggle="select2">
+                                <option value="TLS" selected>TLS</option>
+                                <option value="SSL">SSL</option>
+                                <option value="None">Không mã hóa (None)</option>
+                            </select>
                         </div> -->
                     </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
-                    <!-- Đưa nút Test kết nối sang góc trái -->
-                    <button type="button" class="btn btn-info" id="btnTestGeoConnection">
+                    <!-- Nút test kết nối được đổi sang Test Email -->
+                    <button type="button" class="btn btn-info" id="btnTestEmailConnection">
                         <i class="mdi mdi-lan-connect me-1"></i> Kiểm tra kết nối
                     </button>
                     
                     <div>
                         <button type="button" class="btn btn-light" data-bs-dismiss="modal">Đóng</button>
-                        <!-- Đổi màu nút Lưu thành success giống code mẫu của bạn -->
                         <button type="button" class="btn btn-success"><i class="mdi mdi-content-save me-1"></i> Lưu thay đổi</button>
                     </div>
                 </div>
