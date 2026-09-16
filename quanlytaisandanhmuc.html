@@ -152,427 +152,1616 @@
         </div>
         <!-- ========== Topbar End ========== -->
 
-        <div class="content-page">
-            <div class="content">
-                <!-- Start Content-->
-                <div class="container-fluid" style="position: relative; z-index: 1;">
-                    <!-- ==============================
-                         DỮ LIỆU & TÀI SẢN - OVERVIEW
-                         ============================== -->
+        <div class="page-wrapper">
+            <!-- Page Content-->
+            <div class="page-content-tab">
+                <div class="container-fluid mb-2">
 
-                    <!-- DỮ LIỆU & TÀI SẢN -->
-                    <div class="row">
+                    <!-- end page title end breadcrumb -->
+                    <div class="mt-2">
+                        <div class="row">
+                            <div class="col-lg-12">
 
-                        <div class="asset-detail-section" data-section="catalog">
-
-                            <div class="card mb-3">
                                 <div class="card-body">
-                                    <div class="row g-2">
-                                        <div class="col-12 col-md-5">
-                                            <div class="input-group input-group-sm">
-                                                <span class="input-group-text"><i class="mdi mdi-magnify"></i></span>
-                                                <input type="text" class="form-control"
-                                                    placeholder="Tìm mã, tên tài sản..."
-                                                    data-placeholder-vi="Tìm mã, tên tài sản..."
-                                                    data-placeholder-en="Search ID, asset name...">
+                                    <div class="row justify-content-center">
+                                        <div class="col-sm-3">
+                                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                                aria-orientation="vertical">
+                                                <a class="nav-link waves-effect waves-light active"
+                                                    id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home"
+                                                    role="tab" aria-controls="v-pills-home" aria-selected="true">Loại hồ
+                                                    sơ</a>
+                                                <a class="nav-link waves-effect waves-light" id="v-pills-profile-tab"
+                                                    data-bs-toggle="pill" href="#v-pills-profile" role="tab"
+                                                    aria-controls="v-pills-profile" aria-selected="false">Loại sự cố</a>
+                                                <a class="nav-link waves-effect waves-light" id="v-pills-settings-tab"
+                                                    data-bs-toggle="pill" href="#v-pills-settings" role="tab"
+                                                    aria-controls="v-pills-settings" aria-selected="false">Loại tài
+                                                    sản</a>
+                                                <a class="nav-link waves-effect waves-light" id="v-pills-settings-tab"
+                                                    data-bs-toggle="pill" href="#v-pills-settings1" role="tab"
+                                                    aria-controls="v-pills-settings" aria-selected="false">Trạng thái
+                                                    tài
+                                                    sản</a>
+                                                <a class="nav-link waves-effect waves-light" id="v-pills-settings-tab"
+                                                    data-bs-toggle="pill" href="#v-pills-settings2" role="tab"
+                                                    aria-controls="v-pills-settings" aria-selected="false">Tình trạng
+                                                    tài
+                                                    sản</a>
+                                                <a class="nav-link waves-effect waves-light" id="v-pills-settings-tab"
+                                                    data-bs-toggle="pill" href="#v-pills-settings3" role="tab"
+                                                    aria-controls="v-pills-settings" aria-selected="false">Đơn vị tính
+                                                    tài
+                                                    sản</a>
+                                                <a class="nav-link waves-effect waves-light" id="v-pills-settings-tab"
+                                                    data-bs-toggle="pill" href="#v-pills-settings4" role="tab"
+                                                    aria-controls="v-pills-settings" aria-selected="false">Loại thành
+                                                    phần
+                                                    tài sản </a>
+                                                <a class="nav-link waves-effect waves-light" id="v-pills-settings-tab"
+                                                    data-bs-toggle="pill" href="#v-pills-settings5" role="tab"
+                                                    aria-controls="v-pills-settings" aria-selected="false">Kiểu thuộc
+                                                    tính
+                                                    tài sản</a>
+                                                <a class="nav-link waves-effect waves-light" id="v-pills-settings-tab"
+                                                    data-bs-toggle="pill" href="#v-pills-settings6" role="tab"
+                                                    aria-controls="v-pills-settings" aria-selected="false">Loại lớp dữ
+                                                    liệu
+                                                    tài sản</a>
+                                                <a class="nav-link waves-effect waves-light" id="v-pills-settings-tab"
+                                                    data-bs-toggle="pill" href="#v-pills-settings7" role="tab"
+                                                    aria-controls="v-pills-settings" aria-selected="false">Đơn vị</a>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-6 col-md-2">
-                                            <select class="form-select form-select-sm">
-                                                <option data-vi="Tất cả nhóm" data-en="All groups">Tất cả nhóm</option>
-                                                <option data-vi="Đường ống" data-en="Pipelines">Đường ống</option>
-                                                <option data-vi="Van" data-en="Valves">Van</option>
-                                                <option data-vi="Đồng hồ" data-en="Meters">Đồng hồ</option>
-                                                <option data-vi="Thiết bị" data-en="Equipment">Thiết bị</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-12 col-sm-6 col-md-2">
-                                            <select class="form-select form-select-sm">
-                                                <option data-vi="Tất cả trạng thái" data-en="All statuses">Tất cả trạng
-                                                    thái</option>
-                                                <option data-vi="Hoạt động" data-en="Operational">Hoạt động</option>
-                                                <option data-vi="Cảnh báo" data-en="Warning">Cảnh báo</option>
-                                                <option data-vi="Hỏng" data-en="Damaged">Hỏng</option>
-                                                <option data-vi="Bảo trì" data-en="Maintenance">Bảo trì</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-12 col-md-3 text-md-end">
-                                            <button class="btn btn-sm btn-primary">
-                                                <i class="mdi mdi-magnify me-1"></i>
-                                                <span data-vi="Tìm kiếm" data-en="Search">Tìm kiếm</span>
-                                            </button>
-                                            <button class="btn btn-sm btn-outline-secondary">
-                                                <i class="mdi mdi-filter-variant"></i>
-                                            </button>
+                                        <div class="col-sm-9">
+                                            <div class="tab-content mo-mt-2" id="v-pills-tabContent">
+                                                <div class="tab-pane fade active show" id="v-pills-home" role="tabpanel"
+                                                    aria-labelledby="v-pills-home-tab">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <button class="btn btn-outline-success btn-sm px-3"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#bd-example-modal-xl">Thêm
+                                                                        mới</button>
+
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <form class="d-flex align-items-center gap-2">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            placeholder="Tìm theo tên danh mục">
+
+                                                                        <button type="button"
+                                                                            class="btn btn-primary btn-sm px-3">
+                                                                            Lọc
+                                                                        </button>
+                                                                    </form>
+                                                                </div><!--end col-->
+                                                            </div> <!--end row-->
+                                                        </div><!--end card-header-->
+                                                        <div class="px-3 py-1">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>STT</th>
+                                                                            <th>Tên danh mục</th>
+                                                                            <th class="text-center">Chức năng</th>
+                                                                        </tr><!--end tr-->
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>Hồ sơ hoàn công</td>
+
+
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>2</td>
+                                                                            <td>Hình ảnh đính kèm</td>
+
+
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>3</td>
+                                                                            <td>Hồ sơ hố thi công hố gas</td>
+
+
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>4</td>
+                                                                            <td>HS_TS Máy phát điện CN Dĩ An</td>
+
+
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>5</td>
+                                                                            <td>Hồ sơ mời thầu dự án tuyến ống cấp nước
+                                                                                TDM</td>
+
+
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+
+
+
+
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <!-- <button class="btn btn-outline-success btn-sm px-4"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#bd-example-modal-xl">+ Thêm
+                                                                    mới</button> -->
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <nav aria-label="...">
+                                                                        <ul class="pagination">
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Previous">
+                                                                                    <span aria-hidden="true">«</span>
+                                                                                    <span
+                                                                                        class="sr-only">Previous</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">1</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">2</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">3</a></li>
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Next">
+                                                                                    <span aria-hidden="true">»</span>
+                                                                                    <span class="sr-only">Next</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul><!--end pagination-->
+                                                                    </nav><!--end nav-->
+                                                                </div> <!--end col-->
+                                                            </div><!--end row-->
+                                                        </div><!--end card-body-->
+                                                    </div><!--end card-->
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                                    aria-labelledby="v-pills-profile-tab">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <button class="btn btn-outline-success btn-sm px-3"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#bd-example-modal-xl">Thêm
+                                                                        mới</button>
+
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <form class="d-flex align-items-center gap-2">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            placeholder="Tìm theo tên loại sự cố">
+
+                                                                        <button type="button"
+                                                                            class="btn btn-primary btn-sm px-3">
+                                                                            Lọc
+                                                                        </button>
+                                                                    </form>
+                                                                </div><!--end col-->
+                                                            </div> <!--end row-->
+                                                        </div><!--end card-header-->
+                                                        <div class="px-3 py-1">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>STT</th>
+                                                                            <th>Tên loại sự cố</th>
+                                                                            <th class="text-center">Chức năng</th>
+                                                                        </tr><!--end tr-->
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>Bể ống nước</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>2</td>
+                                                                            <td>Sự cố hỏng van</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>3</td>
+                                                                            <td>Sự cố hỏng đồng hồ tổng</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>4</td>
+                                                                            <td>Sự cố xì đường ống nước cấp</td>
+
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <!-- <button class="btn btn-outline-success btn-sm px-4"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#bd-example-modal-xl">+ Thêm
+                                                                    mới</button> -->
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <nav aria-label="...">
+                                                                        <ul class="pagination">
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Previous">
+                                                                                    <span aria-hidden="true">«</span>
+                                                                                    <span
+                                                                                        class="sr-only">Previous</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">1</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">2</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">3</a></li>
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Next">
+                                                                                    <span aria-hidden="true">»</span>
+                                                                                    <span class="sr-only">Next</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul><!--end pagination-->
+                                                                    </nav><!--end nav-->
+                                                                </div> <!--end col-->
+                                                            </div><!--end row-->
+                                                        </div><!--end card-body-->
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                                    aria-labelledby="v-pills-settings-tab">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <button class="btn btn-outline-success btn-sm px-3"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#bd-example-modal-xl">Thêm
+                                                                        mới</button>
+
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <form class="d-flex align-items-center gap-2">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            placeholder="Tìm theo tên tài sản">
+
+                                                                        <button type="button"
+                                                                            class="btn btn-primary btn-sm px-3">
+                                                                            Lọc
+                                                                        </button>
+                                                                    </form>
+                                                                </div><!--end col-->
+                                                            </div> <!--end row-->
+                                                        </div><!--end card-header-->
+                                                        <div class="px-3 py-1">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>STT</th>
+                                                                            <th>Tên nguồn tài sản</th>
+                                                                            <th class="text-center">Chức năng</th>
+                                                                        </tr><!--end tr-->
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>Nguồn nợ phải trả</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>2</td>
+                                                                            <td>Nguồn vốn chủ sở hữu</td>
+                                                                            <td class=" text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <!-- <button class="btn btn-outline-success btn-sm px-4"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#bd-example-modal-xl">+ Thêm
+                                                                    mới</button> -->
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <nav aria-label="...">
+                                                                        <ul class="pagination">
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Previous">
+                                                                                    <span aria-hidden="true">«</span>
+                                                                                    <span
+                                                                                        class="sr-only">Previous</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">1</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">2</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">3</a></li>
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Next">
+                                                                                    <span aria-hidden="true">»</span>
+                                                                                    <span class="sr-only">Next</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul><!--end pagination-->
+                                                                    </nav><!--end nav-->
+                                                                </div> <!--end col-->
+                                                            </div><!--end row-->
+                                                        </div><!--end card-body-->
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-settings1" role="tabpanel"
+                                                    aria-labelledby="v-pills-settings-tab">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <button class="btn btn-outline-success btn-sm px-3"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#bd-example-modal-xl">Thêm
+                                                                        mới</button>
+
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <form class="d-flex align-items-center gap-2">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            placeholder="Tìm theo tên trạng thái">
+
+                                                                        <button type="button"
+                                                                            class="btn btn-primary btn-sm px-3">
+                                                                            Lọc
+                                                                        </button>
+                                                                    </form>
+                                                                </div><!--end col-->
+                                                            </div> <!--end row-->
+                                                        </div><!--end card-header-->
+                                                        <div class="px-3 py-1">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>STT</th>
+                                                                            <th>Tên trạng thái</th>
+                                                                            <th class="text-center">Chức năng</th>
+                                                                        </tr><!--end tr-->
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>Bảo trì sữa chữa</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>2</td>
+                                                                            <td>Hết hạn sử dụng</td>
+                                                                            <td class=" text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>3</td>
+                                                                            <td>Hoạt động bình thường</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <!-- <button class="btn btn-outline-success btn-sm px-4"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#bd-example-modal-xl">+ Thêm
+                                                                    mới</button> -->
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <nav aria-label="...">
+                                                                        <ul class="pagination">
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Previous">
+                                                                                    <span aria-hidden="true">«</span>
+                                                                                    <span
+                                                                                        class="sr-only">Previous</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">1</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">2</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">3</a></li>
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Next">
+                                                                                    <span aria-hidden="true">»</span>
+                                                                                    <span class="sr-only">Next</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul><!--end pagination-->
+                                                                    </nav><!--end nav-->
+                                                                </div> <!--end col-->
+                                                            </div><!--end row-->
+                                                        </div><!--end card-body-->
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-settings2" role="tabpanel"
+                                                    aria-labelledby="v-pills-settings-tab">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <button class="btn btn-outline-success btn-sm px-3"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#bd-example-modal-xl">Thêm
+                                                                        mới</button>
+
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <form class="d-flex align-items-center gap-2">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            placeholder="Tìm theo tên tình trạng">
+
+                                                                        <button type="button"
+                                                                            class="btn btn-primary btn-sm px-3">
+                                                                            Lọc
+                                                                        </button>
+                                                                    </form>
+                                                                </div><!--end col-->
+                                                            </div> <!--end row-->
+                                                        </div><!--end card-header-->
+                                                        <div class="px-3 py-1">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>STT</th>
+                                                                            <th>Tên tình trạng</th>
+                                                                            <th class="text-center">Chức năng</th>
+                                                                        </tr><!--end tr-->
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>Đã báo giảm</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>2</td>
+                                                                            <td>Dư thừa</td>
+                                                                            <td class=" text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>3</td>
+                                                                            <td>Lưu kho</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>4</td>
+                                                                            <td>Đang sử dụng</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <!-- <button class="btn btn-outline-success btn-sm px-4"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#bd-example-modal-xl">+ Thêm
+                                                                    mới</button> -->
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <nav aria-label="...">
+                                                                        <ul class="pagination">
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Previous">
+                                                                                    <span aria-hidden="true">«</span>
+                                                                                    <span
+                                                                                        class="sr-only">Previous</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">1</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">2</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">3</a></li>
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Next">
+                                                                                    <span aria-hidden="true">»</span>
+                                                                                    <span class="sr-only">Next</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul><!--end pagination-->
+                                                                    </nav><!--end nav-->
+                                                                </div> <!--end col-->
+                                                            </div><!--end row-->
+                                                        </div><!--end card-body-->
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-settings3" role="tabpanel"
+                                                    aria-labelledby="v-pills-settings-tab">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <button class="btn btn-outline-success btn-sm px-3"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#bd-example-modal-xl">Thêm
+                                                                        mới</button>
+
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <form class="d-flex align-items-center gap-2">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            placeholder="Tìm theo tên đơn vị tính">
+
+                                                                        <button type="button"
+                                                                            class="btn btn-primary btn-sm px-3">
+                                                                            Lọc
+                                                                        </button>
+                                                                    </form>
+                                                                </div><!--end col-->
+                                                            </div> <!--end row-->
+                                                        </div><!--end card-header-->
+                                                        <div class="px-3 py-1">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>STT</th>
+                                                                            <th>Tên đơn vị tính</th>
+                                                                            <th class="text-center">Chức năng</th>
+                                                                        </tr><!--end tr-->
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>Trạm</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>2</td>
+                                                                            <td>Tờ</td>
+                                                                            <td class=" text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>3</td>
+                                                                            <td>M</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>4</td>
+                                                                            <td>KW</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>5</td>
+                                                                            <td>Hố</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <!-- <button class="btn btn-outline-success btn-sm px-4"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#bd-example-modal-xl">+ Thêm
+                                                                    mới</button> -->
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <nav aria-label="...">
+                                                                        <ul class="pagination">
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Previous">
+                                                                                    <span aria-hidden="true">«</span>
+                                                                                    <span
+                                                                                        class="sr-only">Previous</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">1</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">2</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">3</a></li>
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Next">
+                                                                                    <span aria-hidden="true">»</span>
+                                                                                    <span class="sr-only">Next</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul><!--end pagination-->
+                                                                    </nav><!--end nav-->
+                                                                </div> <!--end col-->
+                                                            </div><!--end row-->
+                                                        </div><!--end card-body-->
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-settings4" role="tabpanel"
+                                                    aria-labelledby="v-pills-settings-tab">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <button class="btn btn-outline-success btn-sm px-3"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#bd-example-modal-xl">Thêm
+                                                                        mới</button>
+
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <form class="d-flex align-items-center gap-2">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            placeholder="Tìm theo tên loại thành phần">
+
+                                                                        <button type="button"
+                                                                            class="btn btn-primary btn-sm px-3">
+                                                                            Lọc
+                                                                        </button>
+                                                                    </form>
+                                                                </div><!--end col-->
+                                                            </div> <!--end row-->
+                                                        </div><!--end card-header-->
+                                                        <div class="px-3 py-1">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>STT</th>
+                                                                            <th>Tên loại thành phần</th>
+                                                                            <th class="text-center">Chức năng</th>
+                                                                        </tr><!--end tr-->
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>Phụ tùng</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>2</td>
+                                                                            <td>Thành phần</td>
+                                                                            <td class=" text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <!-- <button class="btn btn-outline-success btn-sm px-4"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#bd-example-modal-xl">+ Thêm
+                                                                    mới</button> -->
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <nav aria-label="...">
+                                                                        <ul class="pagination">
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Previous">
+                                                                                    <span aria-hidden="true">«</span>
+                                                                                    <span
+                                                                                        class="sr-only">Previous</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">1</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">2</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">3</a></li>
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Next">
+                                                                                    <span aria-hidden="true">»</span>
+                                                                                    <span class="sr-only">Next</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul><!--end pagination-->
+                                                                    </nav><!--end nav-->
+                                                                </div> <!--end col-->
+                                                            </div><!--end row-->
+                                                        </div><!--end card-body-->
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-settings5" role="tabpanel"
+                                                    aria-labelledby="v-pills-settings-tab">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <button class="btn btn-outline-success btn-sm px-3"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#bd-example-modal-xl">Thêm
+                                                                        mới</button>
+
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <form class="d-flex align-items-center gap-2">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            placeholder="Tìm theo tên thuộc tính">
+
+                                                                        <button type="button"
+                                                                            class="btn btn-primary btn-sm px-3">
+                                                                            Lọc
+                                                                        </button>
+                                                                    </form>
+                                                                </div><!--end col-->
+                                                            </div> <!--end row-->
+                                                        </div><!--end card-header-->
+                                                        <div class="px-3 py-1">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>STT</th>
+                                                                            <th>Tên thuộc tính</th>
+                                                                            <th class="text-center">Chức năng</th>
+                                                                        </tr><!--end tr-->
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>Giấy tờ</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>2</td>
+                                                                            <td>Thông số kỹ thuật</td>
+                                                                            <td class=" text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>3</td>
+                                                                            <td>Thuộc tính định danh</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                </table>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <!-- <button class="btn btn-outline-success btn-sm px-4"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#bd-example-modal-xl">+ Thêm
+                                                                    mới</button> -->
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <nav aria-label="...">
+                                                                        <ul class="pagination">
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Previous">
+                                                                                    <span aria-hidden="true">«</span>
+                                                                                    <span
+                                                                                        class="sr-only">Previous</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">1</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">2</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">3</a></li>
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Next">
+                                                                                    <span aria-hidden="true">»</span>
+                                                                                    <span class="sr-only">Next</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul><!--end pagination-->
+                                                                    </nav><!--end nav-->
+                                                                </div> <!--end col-->
+                                                            </div><!--end row-->
+                                                        </div><!--end card-body-->
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-settings6" role="tabpanel"
+                                                    aria-labelledby="v-pills-settings-tab">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <button class="btn btn-outline-success btn-sm px-3"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#bd-example-modal-xl">Thêm
+                                                                        mới</button>
+
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <form class="d-flex align-items-center gap-2">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            placeholder="Tìm theo tên loại lớp">
+
+                                                                        <button type="button"
+                                                                            class="btn btn-primary btn-sm px-3">
+                                                                            Lọc
+                                                                        </button>
+                                                                    </form>
+                                                                </div><!--end col-->
+                                                            </div> <!--end row-->
+                                                        </div><!--end card-header-->
+                                                        <div class="px-3 py-1">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>STT</th>
+                                                                            <th>Mã loại lớp</th>
+                                                                            <th>Tên loại lớp</th>
+                                                                            <th class="text-center">Chức năng</th>
+                                                                        </tr><!--end tr-->
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>XLCT</td>
+                                                                            <td>Xử lý chất thải</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>2</td>
+                                                                            <td>XL</td>
+                                                                            <td>Xây lắp</td>
+                                                                            <td class=" text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>3</td>
+                                                                            <td>WW</td>
+                                                                            <td>Thoát nước</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>4</td>
+                                                                            <td>WS</td>
+                                                                            <td>Cấp nước</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>5</td>
+                                                                            <td>PN_G</td>
+                                                                            <td>Phân bón & gạch</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <!-- <button class="btn btn-outline-success btn-sm px-4"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#bd-example-modal-xl">+ Thêm
+                                                                    mới</button> -->
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <nav aria-label="...">
+                                                                        <ul class="pagination">
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Previous">
+                                                                                    <span aria-hidden="true">«</span>
+                                                                                    <span
+                                                                                        class="sr-only">Previous</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">1</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">2</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">3</a></li>
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Next">
+                                                                                    <span aria-hidden="true">»</span>
+                                                                                    <span class="sr-only">Next</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul><!--end pagination-->
+                                                                    </nav><!--end nav-->
+                                                                </div> <!--end col-->
+                                                            </div><!--end row-->
+                                                        </div><!--end card-body-->
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="v-pills-settings7" role="tabpanel"
+                                                    aria-labelledby="v-pills-settings-tab">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <button class="btn btn-outline-success btn-sm px-3"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#bd-example-modal-xl">Thêm
+                                                                        mới</button>
+
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <form class="d-flex align-items-center gap-2">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-sm"
+                                                                            placeholder="Tìm theo tên đơn vị">
+
+                                                                        <button type="button"
+                                                                            class="btn btn-primary btn-sm px-3">
+                                                                            Lọc
+                                                                        </button>
+                                                                    </form>
+                                                                </div><!--end col-->
+                                                            </div> <!--end row-->
+                                                        </div><!--end card-header-->
+                                                        <div class="px-3 py-1">
+                                                            <div class="table-responsive">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>STT</th>
+                                                                            <th>Mã đơn vị</th>
+                                                                            <th>Tên viết tắt</th>
+                                                                            <th>Tên đơn vị</th>
+                                                                            <th>Lớp dữ liệu</th>
+                                                                            <th class="text-center">Chức năng</th>
+                                                                        </tr><!--end tr-->
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>DA BIWASE</td>
+                                                                            <td>Dĩ An BIWASE</td>
+                                                                            <td>Công ty TNHH MTV Dĩ An BIWASE</td>
+                                                                            <td>Cấp Nước</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>2</td>
+                                                                            <td>KLH BIWASE</td>
+                                                                            <td>KLH Bình Dương BIWASE</td>
+                                                                            <td>Công ty TNHH MTV KLH Bình Dương BIWASE
+                                                                            </td>
+                                                                            <td>Cấp Nước</td>
+                                                                            <td class=" text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>3</td>
+                                                                            <td>BB BIWASE</td>
+                                                                            <td>Bàu Bàng BIWASE</td>
+                                                                            <td>Công ty TNHH MTV Bàu Bàng BIWASE</td>
+                                                                            <td>Cấp Nước</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>4</td>
+                                                                            <td>TU BIWASE</td>
+                                                                            <td>Tân Uyên BIWASE</td>
+                                                                            <td>Công ty TNHH MTV Tân Uyên BIWASE</td>
+                                                                            <td>Cấp Nước</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                        <tr>
+                                                                            <td>5</td>
+                                                                            <td>Nước Biwase BP</td>
+                                                                            <td>Nước Biwase Bình Phước</td>
+                                                                            <td>Công ty TNHH MTV Nước BIWASE Bình Phước
+                                                                            </td>
+                                                                            <td>Thoát Nước</td>
+                                                                            <td class="text-center">
+
+                                                                                <a href="#"><i
+                                                                                        class="las la-pen text-secondary font-16"
+                                                                                        title="Sửa"></i></a>
+                                                                                <a href="#"><i
+                                                                                        class="las la-trash-alt text-secondary font-16"
+                                                                                        title="Xóa"></i></a>
+                                                                            </td>
+                                                                        </tr><!--end tr-->
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <!-- <button class="btn btn-outline-success btn-sm px-4"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#bd-example-modal-xl">+ Thêm
+                                                                    mới</button> -->
+                                                                </div><!--end col-->
+                                                                <div class="col-auto">
+                                                                    <nav aria-label="...">
+                                                                        <ul class="pagination">
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Previous">
+                                                                                    <span aria-hidden="true">«</span>
+                                                                                    <span
+                                                                                        class="sr-only">Previous</span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">1</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">2</a></li>
+                                                                            <li class="page-item"><a class="page-link"
+                                                                                    href="#">3</a></li>
+                                                                            <li class="page-item">
+                                                                                <a class="page-link" href="#"
+                                                                                    aria-label="Next">
+                                                                                    <span aria-hidden="true">»</span>
+                                                                                    <span class="sr-only">Next</span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul><!--end pagination-->
+                                                                    </nav><!--end nav-->
+                                                                </div> <!--end col-->
+                                                            </div><!--end row-->
+                                                        </div><!--end card-body-->
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
+                            </div><!--end col-->
+
+                        </div><!--end row-->
+
+
+                    </div><!-- div mt2 -->
+                </div><!-- container -->
+                <!-- Footer Start -->
+                <footer class="footer footer-theme-synced">
+                    <div class="container-fluid" style="position: relative; z-index: 2;">
+                        <div class="row">
+                            <div class="col-md-6" data-vi="Phát triển bởi: DIADU Co., Ltd"
+                                data-en="Developed by: DIADU Co., Ltd">
+                                Phát triển bởi: DIADU Co., Ltd
                             </div>
-
-                            <div class="card mb-3">
-                                <div
-                                    class="card-header bg-transparent d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <h5 class="mb-1" data-vi="Danh mục tài sản" data-en="Asset catalog">Danh mục tài
-                                            sản</h5>
-                                        <small class="text-muted" data-vi="Danh sách tài sản trong hệ thống"
-                                            data-en="Assets registered in the system">
-                                            Danh sách tài sản trong hệ thống
-                                        </small>
-                                    </div>
-                                    <span class="badge bg-primary-subtle text-primary">25,842</span>
+                            <div class="col-md-6">
+                                <div class="text-md-end footer-links d-none d-md-block">
+                                    <a href="javascript: void(0);" data-vi="Giới thiệu" data-en="About">Giới thiệu</a>
+                                    <a href="javascript: void(0);" data-vi="Hỗ trợ" data-en="Support">Hỗ trợ</a>
+                                    <a href="javascript: void(0);" data-vi="Liên hệ" data-en="Contact">Liên hệ</a>
                                 </div>
-
-                                <div class="table-responsive">
-                                    <table class="table table-hover align-middle mb-0 asset-table">
-                                        <thead>
-                                            <tr>
-                                                <th class="ps-3">ID</th>
-                                                <th data-vi="Tên tài sản" data-en="Asset name">Tên tài sản</th>
-                                                <th data-vi="Loại" data-en="Type">Loại</th>
-                                                <th data-vi="Vật liệu" data-en="Material">Vật liệu</th>
-                                                <th data-vi="Khu vực" data-en="Area">Khu vực</th>
-                                                <th data-vi="Trạng thái" data-en="Status">Trạng thái</th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="ps-3 font-monospace">VAN-024</td>
-                                                <td>Van DN200</td>
-                                                <td>Van</td>
-                                                <td>Gang</td>
-                                                <td>DMA-05</td>
-                                                <td><span class="badge bg-warning-subtle text-warning"
-                                                        data-vi="Cảnh báo" data-en="Warning">Cảnh báo</span></td>
-                                                <td class="text-end pe-3">
-                                                    <button class="btn btn-sm btn-link" data-detail-id="VAN-024"><i
-                                                            class="mdi mdi-chevron-right"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="ps-3 font-monospace">ONG-452</td>
-                                                <td>Ống DN100</td>
-                                                <td data-vi="Đường ống" data-en="Pipeline">Đường ống</td>
-                                                <td>HDPE</td>
-                                                <td>DMA-02</td>
-                                                <td><span class="badge bg-danger-subtle text-danger" data-vi="Hỏng"
-                                                        data-en="Damaged">Hỏng</span></td>
-                                                <td class="text-end pe-3">
-                                                    <button class="btn btn-sm btn-link" data-detail-id="ONG-452"><i
-                                                            class="mdi mdi-chevron-right"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="ps-3 font-monospace">BOM-003</td>
-                                                <td>Bơm số 03</td>
-                                                <td data-vi="Thiết bị" data-en="Equipment">Thiết bị</td>
-                                                <td>Inox</td>
-                                                <td>Trạm bơm 01</td>
-                                                <td><span class="badge bg-info-subtle text-info" data-vi="Bảo trì"
-                                                        data-en="Maintenance">Bảo trì</span></td>
-                                                <td class="text-end pe-3">
-                                                    <button class="btn btn-sm btn-link" data-detail-id="BOM-003"><i
-                                                            class="mdi mdi-chevron-right"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="ps-3 font-monospace">DH-1832</td>
-                                                <td>Đồng hồ tổng DN300</td>
-                                                <td data-vi="Đồng hồ" data-en="Meter">Đồng hồ</td>
-                                                <td>Gang</td>
-                                                <td>DMZ-01</td>
-                                                <td><span class="badge bg-success-subtle text-success"
-                                                        data-vi="Hoạt động" data-en="Operational">Hoạt động</span></td>
-                                                <td class="text-end pe-3">
-                                                    <button class="btn btn-sm btn-link" data-detail-id="DH-1832"><i
-                                                            class="mdi mdi-chevron-right"></i></button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <div
-                                    class="card-footer bg-transparent d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
-                                    <small class="text-muted" data-vi="Hiển thị 1–4 trong 25,842 tài sản"
-                                        data-en="Showing 1–4 of 25,842 assets">
-                                        Hiển thị 1–4 trong 25,842 tài sản
-                                    </small>
-                                    <nav>
-                                        <ul class="pagination pagination-sm mb-0">
-                                            <li class="page-item disabled"><a class="page-link" href="#">‹</a></li>
-                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">›</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div> <!-- container -->
-
-            </div> <!-- content -->
-
-            <!-- Footer Start -->
-            <footer class="footer footer-theme-synced">
-                <div class="container-fluid" style="position: relative; z-index: 2;">
-                    <div class="row">
-                        <div class="col-md-6" data-vi="Phát triển bởi: DIADU Co., Ltd"
-                            data-en="Developed by: DIADU Co., Ltd">
-                            Phát triển bởi: DIADU Co., Ltd
-                        </div>
-                        <div class="col-md-6">
-                            <div class="text-md-end footer-links d-none d-md-block">
-                                <a href="javascript: void(0);" data-vi="Giới thiệu" data-en="About">Giới thiệu</a>
-                                <a href="javascript: void(0);" data-vi="Hỗ trợ" data-en="Support">Hỗ trợ</a>
-                                <a href="javascript: void(0);" data-vi="Liên hệ" data-en="Contact">Liên hệ</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </footer>
-            <!-- end Footer -->
+                </footer>
+            </div>
+            <!-- End Page content -->
 
         </div>
-        <!-- End Page content -->
+        <!-- END wrapper -->
 
-    </div>
-    <!-- END wrapper -->
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
 
-    <!-- Vendor js -->
-    <script src="assets/js/vendor.min.js"></script>
-    <!-- App js -->
-    <script src="assets/js/app.js"></script>
+        <!-- Daterangepicker js -->
+        <script src="assets/vendor/moment/moment.min.js"></script>
+        <script src="assets/vendor/daterangepicker/daterangepicker.js"></script>
 
-    <!-- Daterangepicker js -->
-    <script src="assets/vendor/moment/moment.min.js"></script>
-    <script src="assets/vendor/daterangepicker/daterangepicker.js"></script>
+        <!-- Apex Charts js -->
+        <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
 
-    <!-- Apex Charts js -->
-    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+        <!-- Vector Map js -->
+        <script src="assets/vendor/jsvectormap/jsvectormap.min.js"></script>
+        <script src="assets/vendor/jsvectormap/world-merc.js"></script>
+        <script src="assets/vendor/jsvectormap/world.js"></script>
 
-    <!-- Vector Map js -->
-    <script src="assets/vendor/jsvectormap/jsvectormap.min.js"></script>
-    <script src="assets/vendor/jsvectormap/world-merc.js"></script>
-    <script src="assets/vendor/jsvectormap/world.js"></script>
+        <!-- Dashboard App js -->
 
-    <!-- Dashboard App js -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
+                // 2. LANGUAGE
+                // ==============================
+                const LANG_STORAGE_KEY = 'site-lang';
+                const langToggleFlag = document.getElementById('langToggleFlag');
+                const langToggleLabel = document.getElementById('langToggleLabel');
+                const langOptions = document.querySelectorAll('.language-option');
+                const translatable = document.querySelectorAll('[data-vi][data-en]');
 
-            // ==============================
-            // 1. VIEW SWITCHER
-            // ==============================
-            const sections = document.querySelectorAll('[data-section]');
-            const tabs = document.querySelectorAll('#assetTabs [data-view]');
+                function applyLanguage(lang) {
+                    document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'vi');
 
-            function showView(view) {
-                sections.forEach(section => {
-                    section.classList.toggle('active', section.getAttribute('data-section') === view);
-                });
+                    translatable.forEach(el => {
+                        const text = el.getAttribute(lang === 'en' ? 'data-en' : 'data-vi');
+                        if (text !== null) el.textContent = text;
+                    });
 
-                tabs.forEach(tab => {
-                    tab.classList.toggle('active', tab.getAttribute('data-view') === view);
-                });
+                    document.querySelectorAll('[data-placeholder-vi][data-placeholder-en]').forEach(el => {
+                        el.placeholder = el.getAttribute(
+                            lang === 'en' ? 'data-placeholder-en' : 'data-placeholder-vi'
+                        );
+                    });
 
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
+                    document.querySelectorAll('option[data-vi][data-en]').forEach(el => {
+                        el.textContent = el.getAttribute(lang === 'en' ? 'data-en' : 'data-vi');
+                    });
 
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function () {
-                    showView(this.getAttribute('data-view'));
-                });
-            });
-
-            document.querySelectorAll('[data-view-target]').forEach(btn => {
-                btn.addEventListener('click', function () {
-                    showView(this.getAttribute('data-view-target'));
-                });
-            });
-
-            document.querySelectorAll('[data-detail-id]').forEach(btn => {
-                btn.addEventListener('click', function () {
-                    showView('detail');
-                });
-            });
-
-            const btnAddAsset = document.getElementById('btnAddAsset');
-            if (btnAddAsset) {
-                btnAddAsset.addEventListener('click', function () {
-                    showView('detail');
-                });
-            }
-
-            // ==============================
-            // 2. LANGUAGE
-            // ==============================
-            const LANG_STORAGE_KEY = 'site-lang';
-            const langToggleFlag = document.getElementById('langToggleFlag');
-            const langToggleLabel = document.getElementById('langToggleLabel');
-            const langOptions = document.querySelectorAll('.language-option');
-            const translatable = document.querySelectorAll('[data-vi][data-en]');
-
-            function applyLanguage(lang) {
-                document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'vi');
-
-                translatable.forEach(el => {
-                    const text = el.getAttribute(lang === 'en' ? 'data-en' : 'data-vi');
-                    if (text !== null) el.textContent = text;
-                });
-
-                document.querySelectorAll('[data-placeholder-vi][data-placeholder-en]').forEach(el => {
-                    el.placeholder = el.getAttribute(
-                        lang === 'en' ? 'data-placeholder-en' : 'data-placeholder-vi'
+                    const activeOption = document.querySelector(
+                        `.language-option[data-lang="${lang}"]`
                     );
-                });
 
-                document.querySelectorAll('option[data-vi][data-en]').forEach(el => {
-                    el.textContent = el.getAttribute(lang === 'en' ? 'data-en' : 'data-vi');
-                });
+                    if (activeOption && langToggleFlag && langToggleLabel) {
+                        langToggleFlag.src = activeOption.getAttribute('data-flag');
+                        langToggleLabel.textContent = activeOption.getAttribute('data-label');
+                    }
 
-                const activeOption = document.querySelector(
-                    `.language-option[data-lang="${lang}"]`
-                );
+                    langOptions.forEach(opt => {
+                        opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+                    });
 
-                if (activeOption && langToggleFlag && langToggleLabel) {
-                    langToggleFlag.src = activeOption.getAttribute('data-flag');
-                    langToggleLabel.textContent = activeOption.getAttribute('data-label');
+                    updateConditionChart(lang);
+                }
+
+                function setLanguage(lang) {
+                    localStorage.setItem(LANG_STORAGE_KEY, lang);
+                    applyLanguage(lang);
                 }
 
                 langOptions.forEach(opt => {
-                    opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+                    opt.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        setLanguage(this.getAttribute('data-lang'));
+                    });
                 });
 
-                updateConditionChart(lang);
-            }
+                // ==============================
+                // 3. CONDITION CHART
+                // ==============================
+                let conditionChart = null;
 
-            function setLanguage(lang) {
-                localStorage.setItem(LANG_STORAGE_KEY, lang);
-                applyLanguage(lang);
-            }
+                function chartTextColor() {
+                    return getComputedStyle(document.documentElement)
+                        .getPropertyValue('--bs-body-color').trim() || '#6c757d';
+                }
 
-            langOptions.forEach(opt => {
-                opt.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    setLanguage(this.getAttribute('data-lang'));
-                });
-            });
+                function updateConditionChart(lang) {
+                    if (!conditionChart) return;
 
-            // ==============================
-            // 3. CONDITION CHART
-            // ==============================
-            let conditionChart = null;
+                    conditionChart.updateOptions({
+                        labels: lang === 'en'
+                            ? ['Good', 'Warning', 'Damaged', 'Other']
+                            : ['Tốt', 'Cảnh báo', 'Hỏng', 'Khác'],
+                        chart: { foreColor: chartTextColor() }
+                    });
+                }
 
-            function chartTextColor() {
-                return getComputedStyle(document.documentElement)
-                    .getPropertyValue('--bs-body-color').trim() || '#6c757d';
-            }
+                if (window.ApexCharts) {
+                    const chartEl = document.querySelector('#assetConditionChart');
 
-            function updateConditionChart(lang) {
-                if (!conditionChart) return;
-
-                conditionChart.updateOptions({
-                    labels: lang === 'en'
-                        ? ['Good', 'Warning', 'Damaged', 'Other']
-                        : ['Tốt', 'Cảnh báo', 'Hỏng', 'Khác'],
-                    chart: { foreColor: chartTextColor() }
-                });
-            }
-
-            if (window.ApexCharts) {
-                const chartEl = document.querySelector('#assetConditionChart');
-
-                if (chartEl) {
-                    conditionChart = new ApexCharts(chartEl, {
-                        series: [82, 9, 5, 4],
-                        labels: ['Tốt', 'Cảnh báo', 'Hỏng', 'Khác'],
-                        chart: {
-                            type: 'donut',
-                            height: 250,
-                            toolbar: { show: false },
-                            foreColor: chartTextColor()
-                        },
-                        plotOptions: {
-                            pie: {
-                                donut: {
-                                    size: '70%',
-                                    labels: {
-                                        show: true,
-                                        total: {
+                    if (chartEl) {
+                        conditionChart = new ApexCharts(chartEl, {
+                            series: [82, 9, 5, 4],
+                            labels: ['Tốt', 'Cảnh báo', 'Hỏng', 'Khác'],
+                            chart: {
+                                type: 'donut',
+                                height: 250,
+                                toolbar: { show: false },
+                                foreColor: chartTextColor()
+                            },
+                            plotOptions: {
+                                pie: {
+                                    donut: {
+                                        size: '70%',
+                                        labels: {
                                             show: true,
-                                            label: 'Tổng',
-                                            formatter: function () {
-                                                return '100%';
+                                            total: {
+                                                show: true,
+                                                label: 'Tổng',
+                                                formatter: function () {
+                                                    return '100%';
+                                                }
                                             }
                                         }
                                     }
                                 }
+                            },
+                            dataLabels: { enabled: false },
+                            legend: { show: false },
+                            stroke: { width: 2 },
+                            tooltip: {
+                                y: {
+                                    formatter: value => value + '%'
+                                }
                             }
-                        },
-                        dataLabels: { enabled: false },
-                        legend: { show: false },
-                        stroke: { width: 2 },
-                        tooltip: {
-                            y: {
-                                formatter: value => value + '%'
-                            }
-                        }
-                    });
+                        });
 
-                    conditionChart.render();
+                        conditionChart.render();
+                    }
                 }
-            }
 
-            // ==============================
-            // 4. FOOTER / THEME
-            // ==============================
-            const navbarEl = document.querySelector('.navbar-custom');
-            const footerEl = document.querySelector('.footer-theme-synced');
+                // ==============================
+                // 4. FOOTER / THEME
+                // ==============================
+                const navbarEl = document.querySelector('.navbar-custom');
+                const footerEl = document.querySelector('.footer-theme-synced');
 
-            function syncFooterTheme() {
-                if (!navbarEl || !footerEl) return;
+                function syncFooterTheme() {
+                    if (!navbarEl || !footerEl) return;
 
-                const navStyle = window.getComputedStyle(navbarEl);
-                footerEl.style.backgroundColor = navStyle.backgroundColor;
-                footerEl.style.color = navStyle.color;
-                footerEl.style.borderTop =
-                    '1px solid ' + (navStyle.borderBottomColor || navStyle.color);
+                    const navStyle = window.getComputedStyle(navbarEl);
+                    footerEl.style.backgroundColor = navStyle.backgroundColor;
+                    footerEl.style.color = navStyle.color;
+                    footerEl.style.borderTop =
+                        '1px solid ' + (navStyle.borderBottomColor || navStyle.color);
 
-                if (conditionChart) {
-                    conditionChart.updateOptions({
-                        chart: { foreColor: chartTextColor() }
+                    if (conditionChart) {
+                        conditionChart.updateOptions({
+                            chart: { foreColor: chartTextColor() }
+                        });
+                    }
+                }
+
+                syncFooterTheme();
+
+                const themeToggleBtn = document.getElementById('light-dark-mode');
+                if (themeToggleBtn) {
+                    themeToggleBtn.addEventListener('click', function () {
+                        setTimeout(syncFooterTheme, 0);
                     });
                 }
-            }
 
-            syncFooterTheme();
-
-            const themeToggleBtn = document.getElementById('light-dark-mode');
-            if (themeToggleBtn) {
-                themeToggleBtn.addEventListener('click', function () {
-                    setTimeout(syncFooterTheme, 0);
+                const themeObserver = new MutationObserver(syncFooterTheme);
+                themeObserver.observe(document.documentElement, {
+                    attributes: true,
+                    attributeFilter: ['data-bs-theme']
                 });
-            }
 
-            const themeObserver = new MutationObserver(syncFooterTheme);
-            themeObserver.observe(document.documentElement, {
-                attributes: true,
-                attributeFilter: ['data-bs-theme']
+                // ==============================
+                // 5. INIT
+                // ==============================
+                const savedLang = localStorage.getItem(LANG_STORAGE_KEY) || 'vi';
+                applyLanguage(savedLang);
             });
-
-            // ==============================
-            // 5. INIT
-            // ==============================
-            const savedLang = localStorage.getItem(LANG_STORAGE_KEY) || 'vi';
-            applyLanguage(savedLang);
-        });
-    </script>
+        </script>
 
 </body>
 
